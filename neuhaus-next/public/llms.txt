@@ -1,0 +1,59 @@
+# Neuhaus S.A. — Industria Gráfica
+
+> Imprenta industrial argentina, fundada en Boedo (Ciudad de Buenos Aires),
+> especializada en la producción de prospectos medicinales y etiquetas
+> autoadhesivas para las industrias farmacéutica, cosmética y alimenticia.
+> Opera con planta propia y no terceriza ninguna etapa del proceso.
+
+## Datos de la empresa
+
+- Razón social: Neuhaus S.A. Industria Gráfica
+- Dirección: Colombres 1065, Boedo, C1238AAA, Ciudad Autónoma de Buenos Aires, Argentina
+- Teléfono: +54 11 4925-6364
+- Email: info@neuhaus.com.ar
+- Sitio web: https://imprentaneuhaus.com
+- Reseñas en Google: 4,7 sobre 5 (20 opiniones)
+- Certificaciones: ISO 9001, BPM (Buenas Prácticas de Manufactura), FSC Cadena de Custodia
+
+## Qué produce
+
+- **Prospectos medicinales y cosméticos**: impresos en offset, flexografía o digital.
+  Entrega en formato plano, doblado o en bobina continua, compatible con líneas
+  de envasado automatizadas.
+- **Etiquetas autoadhesivas en rollo**: impresión flexográfica UV de alta definición
+  sobre BOPP blanco, transparente y metalizado, papel ilustración y Martelé.
+- **Impresos comerciales**: folletería, recetarios, revistas, catálogos, anotadores y blocks.
+
+## Tecnologías de impresión
+
+- **Offset**: pliego a pliego, alta resolución. Para tirajes largos y medios.
+- **Flexografía**: terminación a bobina o pliego. Para tirajes largos y medios.
+- **Digital**: sin planchas ni mínimos elevados. Para muestras y bajo volumen.
+
+## Control de calidad
+
+- **Electronic Verification**: compara en tiempo real cada pliego impreso contra el PDF
+  aprobado por el cliente. Detecta diferencias tipográficas, cromáticas o estructurales
+  y separa el pliego antes de que avance en la línea.
+- **Sistema Laetus**: lector integrado en las dobladoras que verifica la legibilidad
+  del código impreso en cada pliego individual.
+- **Departamento de calidad propio**: equipo interno dentro de la planta que audita
+  desde preprensa hasta despacho. El control no se terceriza.
+
+Cadena de producción integrada: recepción de diseño → preprensa → control EV al primer
+pliego → impresión → control EV → doblado y terminación → control de lectura Laetus →
+acondicionado en cajas → entrega.
+
+## Sectores a los que provee
+
+Laboratorios farmacéuticos, empresas de cosmética y cuidado personal, alimentos y
+bebidas, bodegas, y pymes o emprendedores que necesitan tirajes cortos.
+
+## Páginas
+
+- [Inicio](https://imprentaneuhaus.com): resumen de servicios, sectores y certificaciones.
+- [Prospectos & Impresos](https://imprentaneuhaus.com/servicios/prospectos): productos, formatos de entrega y tecnologías de impresión.
+- [Etiquetas Autoadhesivas](https://imprentaneuhaus.com/servicios/etiquetas): sustratos, industrias y escalas de producción.
+- [Calidad](https://imprentaneuhaus.com/calidad): sistemas de control, certificaciones y cadena de producción.
+- [Nosotros](https://imprentaneuhaus.com/nosotros): historia, planta, misión y valores.
+- [Contacto](https://imprentaneuhaus.com/contacto): formulario de cotización y datos de contacto.

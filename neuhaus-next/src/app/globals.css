@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 53% 23%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 33% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 213 33% 93%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 213 33% 93%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 24% 87%;
+    --input: 210 24% 87%;
+    --ring: 210 53% 23%;
+
+    --radius: 0.25rem;
+
+    --navy: 210 53% 23%;
+    --navy-deep: 210 60% 15%;
+    --navy-overlay: 210 58% 19%;
+    --steel: 213 33% 93%;
+    --steel-dark: 210 24% 87%;
+    --text-dark: 222 47% 11%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  /* Respeta a quien pidió menos movimiento en el sistema operativo. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+
+interface Props {
+  value: string;
+  label?: string;
+  suffix?: string;
+  delay?: number;
+  className?: string;
+}
+
+const CounterNumber = ({ value, label = "", suffix = "", delay = 0, className }: Props) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [displayValue, setDisplayValue] = useState("0");
+  const numericValue = parseInt(value.replace(/\D/g, ""), 10);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 2000;
+    const steps = 60;
+    const increment = numericValue / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= numericValue) {
+        setDisplayValue(value);
+        clearInterval(timer);
+      } else {
+        setDisplayValue(Math.floor(current).toString());
+      }
+    }, duration / steps);
+    return () => clearInterval(timer);
+  }, [isInView, numericValue, value]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay }}
+      className="text-center"
+    >
+      <div className={className || "text-4xl md:text-5xl lg:text-6xl font-serif text-foreground mb-2"}>
+        {displayValue}{suffix}
+      </div>
+      {label && <div className="text-xs text-muted-foreground font-medium tracking-widest uppercase">{label}</div>}
+    </motion.div>
+  );
+};
+
+export default CounterNumber;
