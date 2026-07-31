@@ -4,7 +4,7 @@ const Stats = () => (
   <section className="border-b border-border bg-background py-16 md:py-0 md:h-[20vh] md:min-h-[150px] flex flex-col justify-center">
     <div className="container mx-auto px-4 md:px-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 text-center md:text-left">
-        <CounterNumber value="45" suffix="+" label="Años de trayectoria" delay={0} className="text-5xl md:text-5xl font-serif text-foreground leading-none" />
+        <CounterNumber value="50" suffix="+" label="Años de trayectoria" delay={0} className="text-5xl md:text-5xl font-serif text-foreground leading-none" />
         <CounterNumber value="3" label="Certificaciones internacionales" delay={0.2} className="text-5xl md:text-5xl font-serif text-foreground leading-none" />
         <CounterNumber value="100" suffix="%" label="Producción integrada" delay={0.4} className="text-5xl md:text-5xl font-serif text-foreground leading-none" />
       </div>

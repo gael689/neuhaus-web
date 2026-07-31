@@ -5,7 +5,7 @@ import CertificationsGrid from "@/components/CertificationsGrid";
 import History from "@/sections/nosotros/History";
 import Quote from "@/sections/nosotros/Quote";
 import MisionVision from "@/sections/nosotros/MisionVision";
-import Values from "@/sections/nosotros/Values";
+// import Values from "@/sections/nosotros/Values"; // Oculta: se repite con "Valores" de MisionVision (Excel, fila B18/B46-B47)
 import Plant from "@/sections/nosotros/Plant";
 import { pageSeo } from "@/lib/seo";
 import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
@@ -30,16 +30,15 @@ export default function NosotrosPage() {
         )}
       />
 
-      {/* ANTIGÜEDAD PENDIENTE — "Desde 1979" pasa a 1976 cuando se confirme Q4. */}
       <PageHero
-        title="Desde 1979, imprimiendo para la industria nacional."
+        title="Desde 1976, imprimiendo para la industria nacional."
         bgImage={teamPlant}
         bgAlt="Equipo de Neuhaus S.A. en la planta de Boedo, Buenos Aires"
       />
       <History />
       <Quote />
       <MisionVision />
-      <Values />
+      {/* <Values /> */}
       <Plant />
       <CertificationsGrid title="Certificaciones" variant="nosotros" />
     </>

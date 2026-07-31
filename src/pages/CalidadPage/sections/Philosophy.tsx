@@ -9,7 +9,7 @@ const Philosophy = () => (
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8">Nuestro Sistema</h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light mb-6">
-            En Neuhaus entendemos que los errores cuestan caro: un prospecto manchado, un QR que no funciona o una etiqueta ilegible pueden tener consecuencias de impacto.
+            En Neuhaus entendemos que los errores cuestan caro: un prospecto manchado, un código de barras que no funciona o una etiqueta ilegible pueden tener consecuencias de impacto.
           </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light">
             Por eso construimos un sistema de control integrado en cada etapa del proceso, con tecnología específica para la detección de errores y un departamento de calidad propio dentro de la planta, para poder detectar y evitar hasta el más mínimo error.

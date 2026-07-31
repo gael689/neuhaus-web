@@ -22,7 +22,7 @@ const certs = [
 ];
 
 const Certifications = () => (
-  <section className="py-24 md:py-36 bg-secondary">
+  <section className="py-24 md:py-36 bg-background">
     <div className="container mx-auto px-4 md:px-6">
       <AnimatedSection>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-16 md:mb-24">Certificaciones</h2>

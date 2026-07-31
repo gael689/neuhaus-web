@@ -31,10 +31,8 @@ export default function CalidadPage() {
         )}
       />
 
-      {/* PENDIENTE — el Excel indica sacar el subtítulo (fila B36-B37). Sin aplicar. */}
       <PageHero
         title="La calidad no es un resultado. Es un proceso."
-        subtitle="Cada trabajo que sale de nuestra planta pasó por un sistema de control que pocos proveedores gráficos pueden ofrecer."
         bgImage={qualityControl}
         bgAlt="Control de calidad de impresión para la industria farmacéutica en Neuhaus"
       />

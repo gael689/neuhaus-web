@@ -14,8 +14,8 @@ import { SITE } from "@/lib/site";
  *
  * Configuración requerida (.env.local):
  *   RESEND_API_KEY=re_...
- *   CONTACTO_EMAIL_TO=...      (PENDIENTE Q6: casilla destino a definir)
- *   CONTACTO_EMAIL_FROM=...    (dominio verificado en Resend)
+ *   CONTACTO_EMAIL_TO=...      (opcional: si no se define, usa SITE.contact.email)
+ *   CONTACTO_EMAIL_FROM=...    (obligatorio: remitente en dominio verificado en Resend)
  */
 
 const schema = z.object({

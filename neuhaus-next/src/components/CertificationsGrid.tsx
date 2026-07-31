@@ -44,7 +44,7 @@ const CertificationsGrid = ({ title, variant = "nosotros", showPolicy = false }:
   const isCalidad = variant === "calidad";
 
   return (
-    <section className={isCalidad ? "py-24 md:py-32 bg-background" : "py-24 md:py-36 bg-secondary"}>
+    <section className={`bg-background ${isCalidad ? "py-24 md:py-32" : "py-24 md:py-36"}`}>
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection>
           <h2

@@ -5,8 +5,9 @@ import { Award, Handshake, Users, TrendingUp } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 /*
- * PENDIENTE — el Excel indica sacar esta sección completa ("Lo que nos
- * representa", filas B18 y B46-B47, repetido dos veces). Sin aplicar.
+ * Sección oculta a pedido del cliente (Excel, filas B18 y B46-B47: se repetía
+ * con "Valores" de MisionVision.tsx). No se borra el archivo por si se
+ * necesita reactivar — ver import comentado en app/nosotros/page.tsx.
  */
 const items = [
   {
@@ -17,7 +18,7 @@ const items = [
   {
     icon: Handshake,
     title: "Confianza sostenida",
-    text: "Más de cuatro décadas acompañando a laboratorios y empresas en sus necesidades gráficas. La confianza se construye trabajo a trabajo.",
+    text: "Más de cinco décadas acompañando a laboratorios y empresas en sus necesidades gráficas. La confianza se construye trabajo a trabajo.",
   },
   {
     icon: Users,

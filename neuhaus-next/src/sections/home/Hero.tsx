@@ -27,7 +27,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     eyebrow: "Producción",
-    title: "Cada impresión,\ncada detalle,\nbajo el mismo techo.",
+    title: "Proceso de\nproducción integrado,\ndesde el archivo hasta\nel producto terminado.",
     cta: "Ver servicios",
     link: "/",
     scrollTo: "servicios",
@@ -40,7 +40,7 @@ const slides: Slide[] = [
   },
   {
     eyebrow: "Trayectoria",
-    title: "Más de 40 años de\nexperiencia en la\nindustria gráfica.",
+    title: "NEUHAUS 3G,\ncontinuidad de\ntercera generación.",
     cta: "Conocé nuestra historia",
     link: "/nosotros",
     image: banner2,

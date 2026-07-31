@@ -18,9 +18,9 @@ const systems = [
   {
     title: "Sistema Laetus",
     image: laetusImg,
-    imageAlt: "Lector Laetus verificando código QR",
+    imageAlt: "Lector Laetus verificando código de barras",
     detail:
-      "Lector integrado en las dobladoras que verifica la legibilidad del código QR en cada pliego individual. Si un QR no se lee correctamente, el pliego es detectado y separado automáticamente.",
+      "Lector integrado en las dobladoras que verifica la legibilidad del código de barras en cada pliego individual. Si el código no se lee correctamente, el pliego es detectado y separado automáticamente.",
   },
   {
     title: "Departamento de Calidad",

@@ -3,21 +3,16 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 
-/*
- * ANTIGÜEDAD PENDIENTE — el Excel cambia 1979 → 1976 y reescribe los textos
- * de 1976 y 1987. Sin aplicar hasta confirmar la fecha de fundación (Q4).
- * Ver PLAN-MIGRACION-SEO.md, bloque A.1.
- */
 const events = [
   {
-    year: "1979",
+    year: "1976",
     label: "Fundación",
-    text: "Nacemos como empresa familiar dedicada a la producción de folletería comercial, recetarios, revistas y anotadores para el mercado nacional.",
+    text: "Empezamos como todas las pymes, como un pequeño taller gráfico dedicado a impresiones comerciales, pero nuestra seriedad y calidad nos llevaron a trabajar para grandes compañías.",
   },
   {
     year: "1987",
     label: "Neuhaus S.A.",
-    text: "Tomamos nuestro nombre definitivo y ampliamos nuestra especialización hacia prospectos medicinales y cosméticos, consolidando nuestra presencia en la industria farmacéutica.",
+    text: "El gran volumen de trabajo, más el acceso al crédito y modernas tecnologías nos impulsaron a convertirnos en NEUHAUS SA Industria Gráfica.",
   },
   {
     year: "Hoy",
@@ -27,7 +22,7 @@ const events = [
 ];
 
 const History = () => (
-  <section className="py-20 md:py-28">
+  <section className="py-20 md:py-28 bg-secondary">
     <div className="container mx-auto px-4 md:px-6">
       <AnimatedSection>
         <div className="mb-14 md:mb-20">
@@ -35,7 +30,7 @@ const History = () => (
             Nuestra historia
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl font-light">
-            Más de cuatro décadas de experiencia en la industria gráfica argentina.
+            Más de cinco décadas de experiencia en la industria gráfica argentina.
           </p>
         </div>
       </AnimatedSection>

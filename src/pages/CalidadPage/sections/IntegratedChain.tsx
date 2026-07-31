@@ -11,7 +11,7 @@ const steps = [
   "Impresión",
   "Control EV",
   "Doblado / Terminación",
-  "Control de lectura Laetus a QR",
+  "Control de lectura Laetus a código de barras",
   "Acondicionado en cajas",
   "Entrega",
 ];

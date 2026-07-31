@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/sections/home/Hero";
 import Stats from "@/sections/home/Stats";
 import ServicesSplit from "@/sections/home/ServicesSplit";
-import WhyNeuhaus from "@/sections/home/WhyNeuhaus";
+// import WhyNeuhaus from "@/sections/home/WhyNeuhaus"; // Oculta a pedido del cliente (Excel, fila B20)
 import Industries from "@/sections/home/Industries";
 import Certifications from "@/sections/home/Certifications";
 import FinalCTA from "@/sections/home/FinalCTA";
@@ -21,7 +21,7 @@ export default function HomePage() {
       <Hero />
       <Stats />
       <ServicesSplit />
-      <WhyNeuhaus />
+      {/* <WhyNeuhaus /> */}
       <Industries />
       <Certifications />
       <FinalCTA />

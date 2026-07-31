@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const cards = [
   { icon: Cpu, title: "Electronic Verification", text: "Comparación en tiempo real del pliego impreso contra el PDF aprobado. Detección automática de errores mínimos." },
-  { icon: QrCode, title: "Sistema Laetus", text: "Lectura y verificación del código QR en cada pliego dentro de las dobladoras." },
+  { icon: QrCode, title: "Sistema Laetus", text: "Lectura y verificación del código de barras en cada pliego dentro de las dobladoras." },
   { icon: Factory, title: "Cadena de producción 100% integrada", text: "Todo el proceso ocurre dentro de nuestra planta, desde la recepción del diseño hasta la entrega final." },
   { icon: ArrowUpRight, title: "Escala flexible", text: "Producimos tanto para industria masiva como para emprendedores y pymes que necesitan tirajes cortos." },
 ];

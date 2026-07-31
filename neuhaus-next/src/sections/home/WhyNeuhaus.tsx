@@ -5,13 +5,9 @@ import { Cpu, ScanBarcode, Factory, ArrowUpRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 /*
- * PENDIENTE Q1 — el Excel de modificaciones indica "sacar tecnología y control
- * en cada etapa". Falta confirmar si se elimina la sección entera o solo el
- * título. Se migra tal cual hasta tener la respuesta.
- *
- * PENDIENTE Laetus — el Excel aclara que Laetus lee CÓDIGO DE BARRAS, no QR.
- * El texto de abajo conserva el original ("código QR") por decisión de no
- * aplicar todavía los cambios de contenido; el ícono ya quedó preparado.
+ * Sección oculta a pedido del cliente (Excel de modificaciones, fila B20:
+ * "sacar tecnología y control en cada etapa"). No se borra el archivo por si
+ * se necesita reactivar — ver import comentado en app/page.tsx.
  */
 const cards = [
   {
@@ -22,7 +18,7 @@ const cards = [
   {
     icon: ScanBarcode,
     title: "Sistema Laetus",
-    text: "Lectura y verificación del código QR en cada pliego dentro de las dobladoras.",
+    text: "Lectura y verificación del código de barras en cada pliego dentro de las dobladoras.",
   },
   {
     icon: Factory,

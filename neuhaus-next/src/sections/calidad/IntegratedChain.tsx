@@ -6,7 +6,6 @@ import AnimatedSection from "@/components/AnimatedSection";
 import ParallaxImage from "@/components/ParallaxImage";
 import heroPrinting from "@/assets/img/linea-produccion-integrada.webp";
 
-/* PENDIENTE Laetus — el paso 7 dice "a QR"; pasa a "a código de barras". Ver A14. */
 const steps = [
   "Recepción de diseño",
   "Preprensa",
@@ -14,7 +13,7 @@ const steps = [
   "Impresión",
   "Control EV",
   "Doblado / Terminación",
-  "Control de lectura Laetus a QR",
+  "Control de lectura Laetus a código de barras",
   "Acondicionado en cajas",
   "Entrega",
 ];

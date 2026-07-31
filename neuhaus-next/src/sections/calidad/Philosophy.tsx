@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import systemImg from "@/assets/img/sistema-control-integrado-neuhaus.webp";
 
-/* PENDIENTE Laetus — "un QR que no funciona" pasa a "código de barras". Ver A14. */
 const Philosophy = () => (
   <section className="py-24 md:py-36">
     <div className="container mx-auto px-4 md:px-6">
@@ -15,8 +14,8 @@ const Philosophy = () => (
             Nuestro Sistema
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light mb-6">
-            En Neuhaus entendemos que los errores cuestan caro: un prospecto manchado, un QR que no
-            funciona o una etiqueta ilegible pueden tener consecuencias de impacto.
+            En Neuhaus entendemos que los errores cuestan caro: un prospecto manchado, un código de
+            barras que no funciona o una etiqueta ilegible pueden tener consecuencias de impacto.
           </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light">
             Por eso construimos un sistema de control integrado en cada etapa del proceso, con

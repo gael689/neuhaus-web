@@ -17,7 +17,7 @@ const Footer = () => (
             />
           </Link>
           <p className="text-sm text-white/60 leading-relaxed max-w-sm">
-            Imprimí lo que necesites. Más de 45 años de experiencia en soluciones gráficas para la industria farmacéutica, cosmética y alimenticia.
+            Imprimí lo que necesites. Más de 50 años de experiencia en soluciones gráficas para la industria farmacéutica, cosmética y alimenticia.
           </p>
         </div>
 

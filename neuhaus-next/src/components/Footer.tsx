@@ -18,9 +18,8 @@ const Footer = () => (
               style={{ filter: "brightness(0) invert(1)" }}
             />
           </Link>
-          {/* ANTIGÜEDAD PENDIENTE — texto idéntico al sitio publicado. Ver lib/site.ts */}
           <p className="text-sm text-white/60 leading-relaxed max-w-sm">
-            Imprimí lo que necesites. Más de 45 años de experiencia en soluciones gráficas
+            Imprimí lo que necesites. Más de 50 años de experiencia en soluciones gráficas
             para la industria farmacéutica, cosmética y alimenticia.
           </p>
 

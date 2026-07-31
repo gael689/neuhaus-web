@@ -363,7 +363,7 @@ La app Next.js está construida en **`neuhaus-next/`**, sin tocar el proyecto Vi
 
 | Fase | Estado |
 |---|---|
-| 0 · Cambios del Excel | ⛔ **No aplicados a propósito.** Documentados y marcados en el código con comentarios `PENDIENTE Q1/Q2/Laetus/ANTIGÜEDAD` |
+| 0 · Cambios del Excel | ✅ **Aplicados 2026-07-30**, en `src/` (Vite, sitio publicado) y en `neuhaus-next/`. Ver "Actualización — 2026-07-30" más abajo. Excepción: sección `Quote` de Nosotros, aún sin resolver. |
 | 1 · Andamiaje Next.js 16 + `next/font` | ✅ |
 | 2 · Migración de las 6 páginas (URLs idénticas) | ✅ |
 | 3 · Optimización de imágenes + `next/image` | ✅ **69,7 MB → 5,7 MB (-91,8 %)** |
@@ -415,10 +415,10 @@ Fase 0 (cambios del cliente) → deploy → después el resto. El cliente ve sus
 
 | # | Pregunta | Estado | Bloquea |
 |---|---|---|---|
-| Q1 | ¿Se elimina la sección "Tecnología y control en cada etapa" de Home completa, o solo el título? | 🔴 Pendiente | Fase 0 |
-| Q2 | ¿Confirmás el H2 "NEUHAUS, una marca instalada desde hace 50 años" con bajada que nombre los sectores? | 🔴 Pendiente | Fase 0 |
+| Q1 | ¿Se elimina la sección "Tecnología y control en cada etapa" de Home completa, o solo el título? | ✅ Se oculta la sección completa (comentada, no borrada) | — |
+| Q2 | ¿Confirmás el H2 "NEUHAUS, una marca instalada desde hace 50 años" con bajada que nombre los sectores? | ✅ Solo cambia el título; bajada y las 4 tarjetas de sectores quedan igual | — |
 | Q3 | ¿"NEUHAUS 3G" es claim oficial permanente? | 🟠 Pendiente | Fase 5 |
-| Q4 | ¿1976 está documentado como año de fundación? | 🟠 Pendiente | Fase 0 |
+| Q4 | ¿1976 está documentado como año de fundación? | ✅ Confirmado por el cliente en la conversación del 2026-07-30 (no hay respaldo documental adjunto, pero la matemática 1976+50=2026 se usó como criterio) | — |
 | Q5 | Dirección | ✅ `Colombres 1065, C1238AAA, CABA` | — |
 | Q6 | ¿A qué casilla llegan los formularios? | 🟡 Pendiente (el cliente lo está definiendo) | Fase 4 |
 | Q7 | Teléfono | ✅ `+54 11 4925-6364` (el del sitio era typo) | — |
@@ -427,3 +427,18 @@ Fase 0 (cambios del cliente) → deploy → después el resto. El cliente ve sus
 | — | Bots de IA: ¿aprobado permitir GPTBot/ClaudeBot/PerplexityBot? | 🟡 Pendiente | Fase 6 |
 
 **Aprobado y listo para ejecutar:** optimización de imágenes vía script (Fase 3, no depende de ninguna respuesta).
+
+---
+
+## Actualización — 2026-07-30
+
+**Fase 0 aplicada**, tanto sobre el sitio Vite actual (`src/`) como sobre `neuhaus-next/` — ambas versiones quedan sincronizadas. Detalle completo de los textos en `CAMBIOS.md`. Resumen de lo resuelto sobre las ambigüedades A.4:
+
+- **Q1** → se oculta toda la sección "Tecnología y control en cada etapa" (`WhyNeuhaus`), no solo el título. Import y render comentados en `app/page.tsx` (y en `HomePage/index.tsx` del lado Vite), sin borrar el archivo.
+- **Q2** → el H2 de "Sectores que confían en nosotros" cambia a "NEUHAUS, una marca instalada desde hace 50 años." Bajada y las 4 tarjetas de sectores (Laboratorios, Cosmética, Alimentos, PyMEs) quedan sin cambios — no se reescribió la bajada nombrando sectores como se había propuesto.
+- **Q4** → 1976 aplicado como año de fundación en `FUNDACION` (`lib/site.ts`) y en todos los textos de antigüedad ("50 años"). Confirmado verbalmente por el cliente, sin documentación adjunta.
+- **A11** → "Lo que nos representa" (`Values.tsx`) se **ocultó**, no se borró — el cliente pidió conservar el archivo por si se necesita reactivar.
+- **A10** → la sección `Quote` de Nosotros ("más de 40 años… en cada trabajo") **sigue sin resolver**, a la espera de que el cliente confirme si se elimina o solo se actualiza el número. No se tocó en ninguna de las dos versiones.
+- Adicional no pedido en el Excel: se ajustó la alternancia de colores de fondo en Nosotros (Historia y Planta en gris, Certificaciones en blanco) para que "Nuestra planta" ocupe el lugar visual que dejó "Lo que nos representa" al ocultarse.
+
+**Pendiente real para poder deployar `neuhaus-next`:** Q3 (claim "NEUHAUS 3G"), Q6 (casilla de los formularios), decisión de hosting, y aprobación de bots de IA — nada de esto bloquea seguir trabajando el contenido.

@@ -1,6 +1,141 @@
 # Registro de cambios — Neuhaus S.A. sitio web
 
-Última actualización: 2026-04-22
+Última actualización: 2026-07-31
+
+> El sitio vigente es **`neuhaus-next/`** (Next.js). El proyecto Vite de la raíz quedó
+> como respaldo de la migración: los cambios nuevos se aplican solo en `neuhaus-next/`.
+
+---
+
+# Ronda de cambios — 2026-07-31
+
+## NOSOTROS — Banner parallax (última fila abierta del Excel)
+`neuhaus-next/src/sections/nosotros/Quote.tsx`
+
+El Excel (filas B14-B16) pedía sacar el texto; el cliente confirmó que la sección **queda**
+y solo se corrige la antigüedad:
+
+| Antes | Después |
+|---|---|
+| "Nuestros más de **40** años de experiencia en el rubro se reflejan en cada trabajo." | "Nuestros más de **50** años de experiencia en el rubro se reflejan en cada trabajo." |
+
+También se sacó el comentario "PENDIENTE" del archivo, y se corrigió "cuatro décadas" →
+"cinco décadas" en `sections/nosotros/Values.tsx` (sección oculta, para que no vuelva a
+aparecer una cifra vieja si se reactiva).
+
+**Con esto, todas las filas del Excel "Modificaciones página WEB" quedan aplicadas.**
+
+---
+
+# Ronda de cambios — 2026-07-30
+
+Cambios solicitados por el cliente vía planilla de modificaciones ("Modificaciones página WEB"), aplicados sobre Home, Nosotros y Calidad.
+
+## Corrección técnica
+
+**El sistema Laetus lee código de barras, no código QR.** El sitio decía "QR" en 5 lugares — se corrigió en todos:
+
+| Archivo | Sección |
+|---|---|
+| `src/pages/HomePage/sections/WhyNeuhaus.tsx` | Card "Sistema Laetus" |
+| `src/pages/EtiquetasPage/sections/Control.tsx` | Título y bajada de la sección |
+| `src/pages/CalidadPage/sections/Systems.tsx` | Card "Sistema Laetus" |
+| `src/pages/CalidadPage/sections/IntegratedChain.tsx` | Paso "Control de lectura Laetus a QR" → "…a código de barras" |
+| `src/pages/CalidadPage/sections/Philosophy.tsx` | Párrafo de introducción |
+
+---
+
+## INICIO (HomePage)
+
+### Hero — banner principal
+`src/pages/HomePage/sections/Hero.tsx`
+
+| Slide | Antes | Después |
+|---|---|---|
+| 1 — Producción | "Cada impresión, cada detalle, bajo el mismo techo." | "Proceso de producción integrado, desde el archivo hasta el producto terminado." |
+| 2 — Trayectoria | "Más de 40 años de experiencia en la industria gráfica." | "NEUHAUS 3G, continuidad de tercera generación." |
+
+### Sectores que confían en nosotros
+`src/pages/HomePage/sections/Industries.tsx`
+
+| Elemento | Antes | Después |
+|---|---|---|
+| Título (H2) | "Sectores que confían en nosotros" | "NEUHAUS, una marca instalada desde hace 50 años." |
+
+Subtítulo y las 4 tarjetas de industrias (Laboratorios, Cosmética, Alimentos, PyMEs) quedan sin cambios.
+
+### Stats — franja de números
+`src/pages/HomePage/sections/Stats.tsx`
+
+"45+ Años de trayectoria" → "50+ Años de trayectoria".
+
+### Tecnología y control en cada etapa — **oculta**
+`src/pages/HomePage/sections/WhyNeuhaus.tsx` / `src/pages/HomePage/index.tsx`
+
+El cliente pidió sacar esta sección. Se comentó su importación y su renderizado en `HomePage/index.tsx` (no se borró el archivo, por si se necesita reactivar).
+
+---
+
+## NOSOTROS
+
+### Hero de página
+`src/pages/NosotrosPage/sections/Hero.tsx`
+
+"Desde 1979, imprimiendo para la industria nacional." → "Desde 1976, imprimiendo para la industria nacional."
+
+### Nuestra historia
+`src/pages/NosotrosPage/sections/History.tsx`
+
+| Año | Antes | Después |
+|---|---|---|
+| 1979 → **1976** | "Nacemos como empresa familiar dedicada a la producción de folletería comercial, recetarios, revistas y anotadores para el mercado nacional." | "Empezamos como todas las pymes, como un pequeño taller gráfico dedicado a impresiones comerciales, pero nuestra seriedad y calidad nos llevaron a trabajar para grandes compañías." |
+| 1987 | "Tomamos nuestro nombre definitivo y ampliamos nuestra especialización hacia prospectos medicinales y cosméticos, consolidando nuestra presencia en la industria farmacéutica." | "El gran volumen de trabajo, más el acceso al crédito y modernas tecnologías nos impulsaron a convertirnos en NEUHAUS SA Industria Gráfica." |
+| Hoy | Sin cambios | Sin cambios |
+
+Subtítulo: "Más de cuatro décadas…" → "Más de cinco décadas…" (consistente con la fundación en 1976).
+
+**Color de fondo:** ahora comparte el gris (`bg-secondary`) con "Nuestra planta", a pedido del cliente para mantener la alternancia de colores entre secciones.
+
+### Misión / Visión → Objetivo / Proyección
+`src/pages/NosotrosPage/sections/MisionVision.tsx`
+
+| Card | Antes | Después |
+|---|---|---|
+| "Misión" | Título "Misión" | Título **"Objetivo"**. Texto: "Nuestro objetivo: responder con velocidad y calidad." + un párrafo breve sobre procesos integrados, tecnología propia y control en cada etapa para farmacéutica, cosmética y alimenticia. |
+| "Visión" | Título "Visión" | Título **"Proyección"**. Texto nuevo: seguir innovando en soluciones gráficas para farmacéutica/cosmética/alimenticia, expandir presencia en el mercado, consolidarse como proveedor preferido con altos estándares de calidad y seguridad. |
+
+**Valores** (dentro de la misma sección): se dejaron **solo los 5 títulos** (Compromiso con la calidad, Innovación, Responsabilidad, Trabajo en equipo, Mejora continua), sin las descripciones. Rediseñados como chips/etiquetas compactas en una fila, en vez de la grilla con mucho espacio vacío que tenían antes.
+
+### Lo que nos representa — **oculta**
+`src/pages/NosotrosPage/sections/Values.tsx` / `src/pages/NosotrosPage/index.tsx`
+
+El cliente marcó esta sección como repetida (se superponía con "Valores" de Misión/Visión: "Mejora continua" aparecía en ambas). Se comentó su importación y renderizado en `NosotrosPage/index.tsx`, sin borrar el archivo.
+
+### Nuestra planta
+`src/pages/NosotrosPage/sections/Plant.tsx`
+
+Fondo cambiado a `bg-secondary` (el gris que tenía la sección oculta "Lo que nos representa"), para no perder la alternancia de colores entre secciones de la página.
+
+### Certificaciones
+`src/pages/NosotrosPage/sections/Certifications.tsx`
+
+Fondo cambiado a `bg-background` (blanco) — quedaba con el mismo gris que "Nuestra planta" y rompía la alternancia.
+
+---
+
+## CALIDAD
+
+### Hero de página
+`src/pages/CalidadPage/sections/Hero.tsx`
+
+Se sacó el subtítulo ("Cada trabajo que sale de nuestra planta pasó por un sistema de control que pocos proveedores gráficos pueden ofrecer."). Queda solo el título: "La calidad no es un resultado. Es un proceso."
+
+---
+
+## Footer
+`src/components/Footer.tsx`
+
+"Más de 45 años de experiencia…" → "Más de 50 años de experiencia…"
 
 ---
 

@@ -8,8 +8,6 @@ import evImg from "@/assets/img/verificacion-electronica-pliegos.webp";
 import laetusImg from "@/assets/img/impresion-offset-planta-neuhaus.webp";
 import calidadImg from "@/assets/img/departamento-calidad-neuhaus.webp";
 
-/* PENDIENTE Laetus — el detalle del sistema Laetus habla de "código QR";
-   el Excel aclara que lee CÓDIGO DE BARRAS. Sin aplicar. Ver A14. */
 type System = {
   title: string;
   image: StaticImageData;
@@ -30,7 +28,7 @@ const systems: System[] = [
     image: laetusImg,
     imageAlt: "Lector Laetus verificando códigos en la dobladora",
     detail:
-      "Lector integrado en las dobladoras que verifica la legibilidad del código QR en cada pliego individual. Si un QR no se lee correctamente, el pliego es detectado y separado automáticamente.",
+      "Lector integrado en las dobladoras que verifica la legibilidad del código de barras en cada pliego individual. Si el código no se lee correctamente, el pliego es detectado y separado automáticamente.",
   },
   {
     title: "Departamento de Calidad",

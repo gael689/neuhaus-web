@@ -38,7 +38,7 @@ const Industries = () => (
   <section className="py-20 md:py-32 bg-background">
     <div className="container mx-auto px-4 md:px-6">
       <AnimatedSection>
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">Sectores que confían en nosotros</h2>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">NEUHAUS, una marca instalada desde hace 50 años.</h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl font-light">
           Desde multinacionales hasta pequeños productores locales, nuestra flexibilidad nos permite adaptarnos a la escala de nuestros clientes.
         </p>

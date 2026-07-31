@@ -7,23 +7,12 @@
  */
 
 /**
- * Año de fundación — valor ACTUAL del sitio publicado.
- *
- * PENDIENTE: el Excel de modificaciones lo cambia a 1976 y unifica la
- * antigüedad en "50 años". Ese cambio NO está aplicado todavía: espera
- * confirmación documental (Q4 de PLAN-MIGRACION-SEO.md). Cuando se confirme,
- * cambiar acá y en los textos marcados con "ANTIGÜEDAD PENDIENTE".
+ * Año de fundación, confirmado por el cliente (Excel de modificaciones, 2026-07-30).
+ * 1976 + 50 = 2026: es de donde sale el "50 años" usado en todo el sitio.
  */
-export const FUNDACION = 1979;
+export const FUNDACION = 1976;
 
-/**
- * Años de trayectoria calculados.
- *
- * OJO: hoy el sitio publicado muestra cifras distintas y contradictorias
- * (45+, "más de 45", "más de 40", "cuatro décadas"). Esta función existe para
- * que, una vez resuelto Q4, haya un solo número derivado de un solo dato.
- * Hasta entonces las secciones conservan su texto original tal cual.
- */
+/** Años de trayectoria calculados a partir de FUNDACION. */
 export const anosTrayectoria = () => new Date().getFullYear() - FUNDACION;
 
 export const SITE = {

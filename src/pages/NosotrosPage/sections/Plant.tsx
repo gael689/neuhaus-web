@@ -57,7 +57,7 @@ const Plant = () => {
   }, [max, index]);
 
   return (
-    <section className="py-24 md:py-36 bg-background overflow-hidden">
+    <section className="py-24 md:py-36 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection>
           <div className="mb-16 md:mb-24">

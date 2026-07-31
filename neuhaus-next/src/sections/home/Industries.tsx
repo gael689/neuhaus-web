@@ -5,11 +5,6 @@ import alimentosImg from "@/assets/img/sector-alimentos-y-bebidas.webp";
 import cosmeticaImg from "@/assets/img/sector-cosmetica-cuidado-personal.webp";
 import pymesImg from "@/assets/img/sector-pymes-emprendedores.webp";
 
-/*
- * PENDIENTE Q2 — el Excel reemplaza el título por "NEUHAUS, una marca instalada
- * desde hace 50 años". Se propuso conservar los sectores en la bajada para no
- * perder relevancia en búsquedas. Sin aplicar hasta confirmar.
- */
 const industries = [
   {
     title: "Laboratorios & Farmacéuticas",
@@ -47,7 +42,7 @@ const Industries = () => (
     <div className="container mx-auto px-4 md:px-6">
       <AnimatedSection>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-          Sectores que confían en nosotros
+          NEUHAUS, una marca instalada desde hace 50 años.
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl font-light">
           Desde multinacionales hasta pequeños productores locales, nuestra flexibilidad nos

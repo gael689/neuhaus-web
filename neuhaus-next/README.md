@@ -23,32 +23,48 @@ npm run optimize:images  # reprocesa las imágenes desde el proyecto Vite
 | `llms.txt` para motores generativos | ✅ |
 | Imágenes optimizadas (69,7 MB → 5,7 MB) + `next/image` | ✅ |
 | Fuentes self-hosted con `next/font` | ✅ |
-| Formularios con Server Actions | ⚠️ código listo, faltan credenciales (ver abajo) |
-| Cambios de contenido del Excel | ⛔ NO aplicados a propósito — ver más abajo |
+| Cambios de contenido del Excel | ✅ **Todos aplicados** (última fila pendiente cerrada el 2026-07-31) — ver `../CAMBIOS.md` |
+| Build de producción (`npm run build`) | ✅ Sin errores |
+| Formularios con Server Actions — código | ✅ Validación server-side real, nunca finge éxito si falta configuración |
+| Formularios con Server Actions — credenciales | ⛔ Falta crear cuenta en Resend y completar `.env.local` (ver abajo) |
+| Deploy | ⛔ No hecho a propósito — el proyecto no está linkeado a Vercel todavía |
 
-## Configuración pendiente
+**Todo lo que es código está resuelto.** Lo único que falta para poder deployar son
+acciones externas (cuenta de Resend, decisión de hosting/dominio) — ninguna requiere
+volver a tocar el repo, solo completar `.env.local` y correr `vercel --prod` (o
+conectar el repo desde el dashboard de Vercel).
+
+## Contenido: sin pendientes
+
+La última fila abierta del Excel (B14-B16, `sections/nosotros/Quote.tsx`) se resolvió el
+**2026-07-31**: el cliente confirmó que la sección **queda**, solo se actualiza el número
+a *"Nuestros más de 50 años de experiencia en el rubro se reflejan en cada trabajo."*
+
+## Configuración pendiente (acción externa, no de código)
 
 Copiar `.env.example` a `.env.local` y completar:
 
 ```
-RESEND_API_KEY=        # cuenta de Resend
-CONTACTO_EMAIL_TO=     # PENDIENTE: casilla destino a confirmar con el cliente
-CONTACTO_EMAIL_FROM=   # remitente en dominio verificado
+RESEND_API_KEY=        # crear cuenta en https://resend.com y generar una API key
+CONTACTO_EMAIL_TO=     # opcional — si se deja vacío, usa SITE.contact.email (info@neuhaus.com.ar)
+CONTACTO_EMAIL_FROM=   # obligatorio — remitente en un dominio verificado en Resend (p. ej. web@imprentaneuhaus.com)
 ```
 
-Sin estas variables el formulario **no finge éxito**: muestra un error con el teléfono
-y el mail de contacto. El sitio Vite anterior mostraba "¡Mensaje enviado!" sin enviar nada.
+Sin `RESEND_API_KEY` y `CONTACTO_EMAIL_FROM` el formulario **no finge éxito**: muestra
+un error real con el teléfono y el mail de contacto, en vez del "¡Mensaje enviado!"
+falso que mostraba el sitio Vite anterior sin enviar nada.
 
-## Cambios del Excel: documentados, no aplicados
+## Decisiones de negocio pendientes (no bloquean el código, sí el deploy final)
 
-Los cambios de contenido pedidos por el cliente **no están aplicados**. El código conserva
-los textos del sitio publicado y marca cada punto afectado con un comentario:
-
-- `PENDIENTE Q1` — sección "Tecnología y control en cada etapa" (`sections/home/WhyNeuhaus.tsx`)
-- `PENDIENTE Q2` — título de sectores (`sections/home/Industries.tsx`)
-- `PENDIENTE Laetus` — "código QR" → "código de barras" (`sections/calidad/*`)
-- `ANTIGÜEDAD PENDIENTE` — 45/40 años y 1979 → 50 años y 1976 (`lib/site.ts`, `sections/home/Stats.tsx`, `components/Footer.tsx`, `sections/nosotros/History.tsx`, `app/nosotros/page.tsx`)
-- Secciones que el Excel manda eliminar: `sections/nosotros/Quote.tsx` y `sections/nosotros/Values.tsx`
+- **Hosting:** confirmar Vercel (recomendado) vs. mantener el Apache actual con export estático.
+- **Dominio:** `imprentaneuhaus.com` ya es el canónico definido — falta configurar el
+  301 permanente de `neuhaus.com.ar` a nivel DNS/registrar cuando se decida el hosting.
+- **Bots de IA:** `robots.ts` ya los permite por defecto (GPTBot, ClaudeBot, PerplexityBot,
+  etc. — ver comentario en el archivo). Es una decisión de negocio que el cliente debería
+  confirmar conscientemente antes de publicar; revertirla es mover esos user-agents a un
+  bloque `disallow`.
+- **"NEUHAUS 3G":** confirmar si es un claim de marca oficial y permanente, para
+  registrarlo también en el JSON-LD (`alternateName`).
 
 El detalle completo, fila por fila, está en `../PLAN-MIGRACION-SEO.md`.
 
@@ -75,8 +91,9 @@ scripts/
 
 ## Antes de publicar
 
-1. Completar las variables de entorno y probar los 3 formularios
-2. Configurar el 301 de `neuhaus.com.ar` → `imprentaneuhaus.com` (conservando la ruta)
-3. Verificar ambos dominios en Google Search Console y enviar el sitemap
-4. Confirmar las coordenadas exactas en `lib/site.ts` (hoy son aproximadas)
-5. Aplicar los cambios del Excel una vez respondidas Q1 y Q2
+1. Crear cuenta en Resend, generar API key y verificar el dominio de envío; completar `.env.local` y probar los 3 formularios
+2. Confirmar hosting (Vercel recomendado) y hacer `vercel link` + deploy
+3. Configurar el 301 de `neuhaus.com.ar` → `imprentaneuhaus.com` (conservando la ruta)
+4. Verificar ambos dominios en Google Search Console y enviar el sitemap
+5. Confirmar las coordenadas exactas en `lib/site.ts` (hoy son aproximadas)
+6. Sign-off consciente del cliente sobre permitir bots de IA (ya está habilitado por defecto en `robots.ts`)
