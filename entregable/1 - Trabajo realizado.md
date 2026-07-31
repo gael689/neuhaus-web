@@ -4,7 +4,7 @@
 **Fecha:** 31 de julio de 2026
 **Sitio:** imprentaneuhaus.com o neuhaus.com.ar (pendiente) — 6 páginas
 
-Este documento recorre el sitio completo, página por página y sección por sección: qué hay en cada una y qué dice.
+Este documento arranca explicando **por qué se rehízo el sitio sobre una tecnología nueva** y qué habilita esa decisión. Después recorre el sitio completo, página por página y sección por sección: qué hay en cada una y qué dice.
 
 Donde algo cambió respecto de la versión anterior, está mostrado como **Antes → Ahora**, con los textos exactos. Donde algo se incorporó o se retiró, está dicho explícitamente. Las secciones que no cambiaron también están señaladas como tales.
 
@@ -12,9 +12,62 @@ El trabajo de posicionamiento en Google y en buscadores con IA va aparte, en el 
 
 ---
 
-# Parte 1 — Resumen
+# Parte 1 — Por qué se rehízo el sitio
 
-El sitio se llevó a una base técnica nueva —**Next.js 16**— conservando las seis direcciones originales, de modo que ningún enlace deja de funcionar.
+Antes del detalle, conviene explicar la decisión de fondo, porque condiciona todo lo demás: **el sitio se reconstruyó sobre una tecnología distinta, Next.js 16.**
+
+## El problema que resolvía
+
+Un sitio web puede armarse de dos maneras.
+
+**La anterior:** la página se ensamblaba **dentro del navegador de quien la visitaba**. El servidor entregaba un documento prácticamente vacío y recién después, ya en la computadora del visitante, se dibujaba el contenido. Para una persona con buena conexión el resultado se ve bien. El problema aparece con **quien no es una persona.**
+
+Cuando Google, Bing, WhatsApp o ChatGPT piden una página, no la "miran": leen el documento que reciben. Y ese documento venía sin contenido.
+
+- **Google** sabe esperar a que la página se arme, pero lo hace en una cola aparte que demora.
+- **Bing, WhatsApp, LinkedIn y Slack** no esperan.
+- **Los buscadores con inteligencia artificial —ChatGPT, Perplexity, Gemini, Claude— tampoco.** Sus rastreadores no ejecutan ese proceso: piden la página, reciben un documento vacío y se van.
+
+Esto no se arregla con ajustes ni optimizaciones. Es la arquitectura. Mientras el sitio funcionara así, **cualquier trabajo de posicionamiento se apoyaba sobre una base que no lo sostenía.**
+
+## Qué hace Next.js 16
+
+Genera **las páginas completas de antemano**. Quien las pide —una persona, Google o ChatGPT— recibe el documento entero de una: todo el texto, los títulos, los datos de la empresa, ya adentro.
+
+Es el framework de referencia para sitios cuyo objetivo es ser encontrados, y está mantenido por la misma empresa donde el sitio queda alojado.
+
+## Qué habilita, en concreto
+
+La migración no fue un fin en sí mismo: es lo que hace posible cada punto de la lista siguiente. Ninguno de estos era alcanzable con la tecnología anterior.
+
+| Qué se puede hacer ahora | Para qué sirve |
+|---|---|
+| Cada página se lee completa sin ejecutar nada | Neuhaus puede aparecer en respuestas de ChatGPT, Perplexity y Gemini |
+| Título y descripción propios por página | Seis resultados distintos en Google en lugar de uno repetido |
+| Datos de la empresa en formato estructurado | Panel de empresa en Google, con certificaciones y reseñas |
+| Mapa del sitio y reglas para buscadores generados por código | Imposible que queden desactualizados |
+| Optimización automática de imágenes | El sitio pasó de 83 MB a 5,8 MB de fotos |
+| Tipografías servidas desde el propio dominio | Carga más rápida, sin saltos de texto |
+| Formularios procesados en el servidor | Validación real que no se puede saltear desde el navegador |
+| Imagen de vista previa generada por página | Los links compartidos por WhatsApp muestran una pieza de marca |
+
+## Por qué importa comercialmente
+
+Neuhaus le vende a compradores industriales: jefes de compras de laboratorios que necesitan un proveedor certificado y capaz de responder ante un organismo regulador.
+
+Ese comprador hoy busca de dos maneras —escribiendo en Google y preguntándole a un asistente de IA—, y el sitio no era plenamente legible en ninguna de las dos. Esta base cambia eso.
+
+El detalle de cómo se aprovecha está en el documento 2.
+
+## Las direcciones no cambiaron
+
+Fue una condición de la migración. `/nosotros` sigue siendo `/nosotros`, `/servicios/etiquetas` sigue siendo `/servicios/etiquetas`.
+
+Importa más de lo que parece: cambiar las direcciones significa perder la autoridad que Google ya le reconoce a cada página y romper cualquier enlace que exista en otro lado. Al mantenerlas, **no hizo falta una sola redirección** y la migración es invisible desde afuera.
+
+---
+
+# Parte 2 — Resumen del trabajo
 
 Sobre esa base se hicieron cuatro cosas:
 
@@ -28,7 +81,7 @@ Sobre esa base se hicieron cuatro cosas:
 
 ---
 
-# Parte 2 — Elementos presentes en todas las páginas
+# Parte 3 — Elementos presentes en todas las páginas
 
 ## Encabezado (menú superior)
 
@@ -64,7 +117,7 @@ Cuatro columnas: logo con descripción de la empresa, navegación, datos de cont
 
 ---
 
-# Parte 3 — Recorrido página por página
+# Parte 4 — Recorrido página por página
 
 # 🏠 Inicio
 
@@ -493,7 +546,7 @@ Que **tres de los nueve pasos sean controles de calidad** es, en sí mismo, el a
 
 ## 2. Formulario
 
-El formulario de consulta general. A la vista es el mismo; **por dentro cambió por completo**. El detalle está en la Parte 4.
+El formulario de consulta general. A la vista es el mismo; **por dentro cambió por completo**. El detalle está en la Parte 5.
 
 ## 3. Datos de contacto
 
@@ -525,7 +578,7 @@ Todos estos datos salen ahora del archivo único de la empresa, que es la refere
 
 ---
 
-# Parte 4 — Los formularios
+# Parte 5 — Los formularios
 
 Los tres formularios del sitio —Contacto, cotización de Prospectos y cotización de Etiquetas— se construyeron sobre el mismo motor, procesado en el servidor.
 
@@ -541,21 +594,9 @@ Los tres formularios del sitio —Contacto, cotización de Prospectos y cotizaci
 
 ---
 
-# Parte 5 — El trabajo de base
+# Parte 6 — El trabajo de base
 
-## La migración
-
-El sitio se llevó a **Next.js 16**, el framework de referencia para sitios cuyo objetivo es posicionar. Es una reescritura completa del proyecto, manteniendo el diseño y sumando la capa que hace posible el trabajo de SEO y GEO.
-
-La diferencia de fondo:
-
-> **Antes:** la página se armaba **dentro del navegador** de quien la visitaba. El buscador recibía primero un documento vacío y el contenido aparecía después.
->
-> **Ahora:** las páginas se **generan completas de antemano**. Quien las pide —una persona, Google o ChatGPT— recibe el documento entero de una, con todo el texto adentro.
-
-Es lo que permite que los buscadores con inteligencia artificial puedan leer el sitio, porque sus rastreadores no ejecutan JavaScript.
-
-**Las seis direcciones se conservaron intactas.** `/nosotros` sigue siendo `/nosotros`. Fue una condición de la migración: mantener las direcciones significa conservar la autoridad que Google ya le reconoce a cada página y que ningún enlace externo se rompa. No hizo falta una sola redirección.
+Lo que no se ve en pantalla, pero sostiene el resto. El porqué de la migración está en la Parte 1; acá va lo que se hizo sobre esa base.
 
 ## Las imágenes
 
@@ -605,7 +646,7 @@ La ventaja de resolverlo así en vez de con una imagen fija: cada página compar
 
 ---
 
-# Parte 6 — Para completar la puesta en marcha
+# Parte 7 — Para completar la puesta en marcha
 
 El desarrollo está terminado y el sitio está publicado. Quedan dos definiciones, ninguna de las cuales requiere volver a tocar el código.
 

@@ -8,12 +8,17 @@ import { Plus } from "lucide-react";
 import prospectosImg from "@/assets/img/impresion-prospectos-offset.webp";
 import labelsImg from "@/assets/img/etiquetas-autoadhesivas-en-rollo.webp";
 
+/**
+ * El corte de línea del título va explícito (\n) y no librado al ancho
+ * disponible: los paneles cambian de ancho al hacer hover, y si el texto
+ * se re-acomoda a mitad de la animación se ve como un salto.
+ */
 const panels = [
   {
     key: "papel" as const,
     num: "01",
     label: "Papel",
-    title: "Prospectos & Impresos",
+    title: "Prospectos &\nImpresos",
     img: prospectosImg,
     imgAlt: "Impresión offset de prospectos medicinales en la planta de Neuhaus",
     href: "/servicios/prospectos",
@@ -45,7 +50,14 @@ const ServicesSplit = () => {
             onMouseEnter={() => setHovered(panel.key)}
             animate={{ flex: hovered === null ? 1 : hovered === panel.key ? 1.6 : 0.4 }}
             transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative overflow-hidden cursor-pointer min-h-[38vh] lg:min-h-0"
+            /*
+             * lg:min-w-[414px] es el piso que impide que el panel comprimido
+             * aplaste el título. Sale de medir la línea más larga en DM Sans
+             * Bold: "Prospectos &" = 318px a 48px, más 96px de padding lateral.
+             * Sin este piso, el 0.4 de flex deja ~256px en una pantalla de
+             * 1280 y el texto queda cortado por el overflow-hidden.
+             */
+            className="relative overflow-hidden cursor-pointer min-h-[38vh] lg:min-h-0 lg:min-w-[414px]"
           >
             <Link href={panel.href} className="block w-full h-full group">
               <motion.div
@@ -57,7 +69,8 @@ const ServicesSplit = () => {
                   src={panel.img}
                   alt={panel.imgAlt}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  /* El panel expandido llega a ~71vw, no a 50vw. */
+                  sizes="(max-width: 1024px) 100vw, 75vw"
                   placeholder="blur"
                   className="object-cover"
                 />
@@ -76,11 +89,14 @@ const ServicesSplit = () => {
                 {panel.num}
               </motion.span>
 
-              <div className="relative z-10 h-full flex flex-col justify-end p-8 md:p-16">
+              <div className="relative z-10 h-full flex flex-col justify-end p-8 md:p-12">
                 <span className="text-[10px] tracking-[0.4em] uppercase text-primary-foreground/60 mb-3">
                   {panel.label}
                 </span>
-                <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-8">
+                <h3
+                  className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight mb-8"
+                  style={{ whiteSpace: "pre-line" }}
+                >
                   {panel.title}
                 </h3>
 
