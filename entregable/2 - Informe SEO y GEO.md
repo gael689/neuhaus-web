@@ -275,7 +275,7 @@ Se apoya en dos argumentos.
 
 `imprentaneuhaus.com` queda entonces como el que redirige, conservando la ruta.
 
-Se implementa al definir el hosting; es configuración de dominio, más el cambio de la constante en el proyecto. Los mails `@neuhaus.com.ar` no se ven afectados en ningún escenario: el dominio de correo y el del sitio son independientes entre sí, y ninguna de las dos opciones los toca.
+Se implementa al conectar el dominio: es configuración de DNS, más el cambio de la constante de dominio en el proyecto. Los mails `@neuhaus.com.ar` no se ven afectados en ningún escenario: el dominio de correo y el del sitio son independientes entre sí, y ninguna de las dos opciones los toca.
 
 ---
 
