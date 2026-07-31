@@ -20,8 +20,18 @@ export const SITE = {
   legalName: "Neuhaus S.A. Industria Gráfica",
   alternateName: "Imprenta Neuhaus",
   /**
-   * Dominio canónico definido con el cliente (2026-07-28).
-   * neuhaus.com.ar apunta acá por redirect 301 permanente, no como alias.
+   * Dominio canónico — PENDIENTE de confirmación del cliente.
+   *
+   * Recomendación (2026-07-31): cambiar a "https://neuhaus.com.ar". Es el
+   * dominio de las casillas de correo de la empresa, y el ccTLD .com.ar suma
+   * señal geográfica de Argentina para las búsquedas locales del AMBA.
+   *
+   * El que no quede elegido se conecta por redirect 301 permanente
+   * conservando la ruta, nunca como alias sirviendo el mismo contenido.
+   *
+   * Al cambiarlo hay que tocar DOS lugares: esta constante y `public/llms.txt`,
+   * que tiene el dominio escrito a mano en 7 líneas (es un archivo estático y
+   * no se deriva de acá). Y actualizar la URL del Google Business Profile.
    */
   url: "https://imprentaneuhaus.com",
   description:

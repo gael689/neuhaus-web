@@ -2,9 +2,9 @@
 ## Informe detallado del trabajo realizado
 
 **Fecha:** 31 de julio de 2026
-**Sitio:** imprentaneuhaus.com — 6 páginas
+**Sitio:** imprentaneuhaus.com o neuhaus.com.ar (pendiente) — 6 páginas
 
-Este documento recorre el sitio completo, página por página y sección por sección: qué hay en cada una, qué cambió en esta ronda, qué se mantuvo como estaba y qué se sacó. Después explica el trabajo de fondo que no se ve pero sostiene todo lo demás.
+Este documento recorre el sitio completo, página por página y sección por sección: qué hay en cada una, qué se incorporó en esta etapa y qué se mantuvo. Después explica el trabajo de base que no se ve pero sostiene todo lo demás.
 
 El trabajo de posicionamiento en Google y en buscadores con IA va aparte, en el documento **"2 - Informe SEO y GEO"**.
 
@@ -12,34 +12,32 @@ El trabajo de posicionamiento en Google y en buscadores con IA va aparte, en el 
 
 ## Cómo leer este documento
 
-Cada sección del sitio está marcada según qué pasó con ella:
+Cada sección del sitio está marcada según qué pasó con ella en esta etapa:
 
 | Marca | Significado |
 |---|---|
-| ✏️ **Modificado** | Ya existía y cambió en esta ronda |
-| ✅ **Se mantiene** | Ya existía y quedó igual (se trasladó al sitio nuevo tal cual) |
-| 🆕 **Nuevo** | No existía antes |
-| ➖ **Se sacó** | Estaba y se desactivó a pedido de Neuhaus |
+| ✏️ **Actualizado** | Se aplicaron los textos y ajustes definidos con Neuhaus |
+| ✅ **Se mantiene** | Contenido y diseño quedaron como estaban |
+| 🆕 **Nuevo** | Se incorporó en esta etapa |
+| ➖ **Desactivado** | Se retiró de la vista a pedido de Neuhaus |
 
-Vale una aclaración sobre "se mantiene": **todo el sitio se reconstruyó desde cero sobre una tecnología distinta.** Que una sección figure como "se mantiene" quiere decir que su contenido y su diseño quedaron iguales, no que no se haya trabajado sobre ella: todas se volvieron a escribir, se optimizaron sus imágenes, se les revisaron los textos alternativos y se ajustó qué parte corre en el servidor y qué parte en el navegador.
+Vale una aclaración sobre "se mantiene": **el sitio se migró a una arquitectura nueva y se reescribió por completo.** Que una sección figure como "se mantiene" quiere decir que su contenido y su diseño quedaron iguales, no que no se haya trabajado sobre ella: todas se rehicieron, se optimizaron sus imágenes, se les cargaron descripciones propias y se definió qué parte corre en el servidor y qué parte en el navegador.
 
 ---
 
-# Parte 1 — Resumen ejecutivo
+# Parte 1 — Resumen
 
-El sitio se reconstruyó por completo. Las direcciones de las páginas son exactamente las mismas, así que ningún link deja de funcionar, pero por dentro cambió todo.
+El sitio se llevó a una base técnica nueva —**Next.js 16**— conservando las seis direcciones originales, de modo que ningún enlace deja de funcionar.
 
-Además de aplicar los cambios de la planilla, se resolvieron cinco problemas de fondo que no estaban en el pedido:
+Sobre esa base se hicieron tres cosas:
 
-**1. Los formularios no enviaban nada.** El sitio mostraba "¡Mensaje enviado!" sin mandar el mensaje a ningún lado. Todas las consultas cargadas desde que la web está online se perdieron.
+**1. Se aplicaron los cambios de contenido de la planilla.** Todas las filas, incluida la última que había quedado abierta.
 
-**2. Google veía las seis páginas como si fueran la misma.** Compartían un único título y una única descripción.
+**2. Se sumó la capa de posicionamiento.** Metadata propia por página, datos estructurados de la empresa, mapa del sitio, resumen para buscadores con IA. Todo el detalle está en el documento 2.
 
-**3. Los buscadores con IA no podían leer el sitio.** ChatGPT, Perplexity, Gemini y Claude recibían una página en blanco.
+**3. Se construyeron los formularios con procesamiento en el servidor.** Validación real y envío por correo de las tres consultas del sitio. *(Quedan pendientes las credenciales de envío — ver Parte 4.)*
 
-**4. Las fotos pesaban 83 MB.** El banner de la portada cargaba unos 10 MB solo para mostrar la primera pantalla.
-
-**5. Había errores de datos.** El teléfono tenía un dígito mal (decía 4925-63**63** en vez de 4925-63**64**), la calle estaba mal escrita en el mapa ("Colomb**e**s"), faltaba el código postal, y el sitio afirmaba en cinco lugares que el sistema Laetus lee **códigos QR** cuando lee **códigos de barras**.
+En paralelo se unificaron los datos de la empresa en un único archivo del que se alimenta todo el sitio, y se optimizó el material fotográfico para web.
 
 ---
 
@@ -51,17 +49,15 @@ Logo a la izquierda y navegación a la derecha: Inicio · Nosotros · Servicios 
 
 El menú es transparente sobre la foto del encabezado y se vuelve sólido al bajar. En celular se abre a pantalla completa. Marca en qué página estás.
 
-### Pie de página — ✏️ Modificado
+### Pie de página — ✏️ Actualizado
 
 Cuatro columnas: logo con descripción de la empresa, navegación, datos de contacto y redes sociales.
 
-**Qué cambió:**
-- El texto decía "Más de **45** años de experiencia" → ahora dice **"Más de 50 años"**
-- El teléfono estaba escrito a mano con el dígito equivocado → ahora sale del archivo único de datos, con el número correcto
-- Se agregó el código postal, que faltaba
-- 🆕 Se agregó el bloque de **4,7 estrellas · 20 opiniones en Google**, que enlaza al perfil de la empresa
+- El texto de presentación acompaña la antigüedad definida con Neuhaus: **"Más de 50 años de experiencia en soluciones gráficas para la industria farmacéutica, cosmética y alimenticia."**
+- Los datos de contacto —dirección completa con código postal, email y teléfono— salen del archivo único de datos de la empresa, verificados contra el perfil de Google Business.
+- 🆕 Se incorporó el bloque de **4,7 estrellas · 20 opiniones en Google**, enlazado al perfil de la empresa.
 
-Ese bloque de reseñas es prueba social real que Neuhaus ya tiene ganada y que el sitio anterior no mostraba en ningún lado.
+Ese bloque de reseñas es prueba social que Neuhaus ya tiene ganada y que ahora aparece en las seis páginas.
 
 ---
 
@@ -69,11 +65,9 @@ Ese bloque de reseñas es prueba social real que Neuhaus ya tiene ganada y que e
 
 # 🏠 Inicio
 
-## 1. Banner principal (carrusel) — ✏️ Modificado
+## 1. Banner principal (carrusel) — ✏️ Actualizado
 
-Tres pantallas que rotan solas cada 6 segundos, con barra de progreso arriba, flechas y puntos para navegar. Se pausa al pasar el mouse. Cada una tiene una foto de fondo, un rótulo chico, un título grande y un botón.
-
-**Las tres pantallas, hoy:**
+Tres pantallas que rotan solas cada 6 segundos, con barra de progreso arriba, flechas y puntos para navegar. Se pausa al pasar el mouse. Cada una tiene una foto de fondo, un rótulo, un título grande y un botón.
 
 | | Rótulo | Título | Botón |
 |---|---|---|---|
@@ -81,46 +75,48 @@ Tres pantallas que rotan solas cada 6 segundos, con barra de progreso arriba, fl
 | 2 | Trayectoria | **"NEUHAUS 3G, continuidad de tercera generación."** | Conocé nuestra historia |
 | 3 | Calidad y procesos | "Impresión bajo normas certificadas ISO, BPM y FSC." | Conocé nuestro enfoque |
 
-**Qué cambió:** la primera decía *"Cada impresión, cada detalle, bajo el mismo techo"* y la segunda *"Más de 40 años de experiencia en la industria gráfica"*. Ambas se reemplazaron por los textos de la planilla. Además se ensanchó el bloque de texto para que los títulos largos no queden apretados, y se corrigió una superposición con el menú.
+Los dos primeros títulos son los definidos en la planilla. Se amplió el ancho del bloque de texto para que los títulos largos respiren mejor, y se ajustó el espaciado superior para que el contenido nunca se solape con el menú.
 
-## 2. Franja de números — ✏️ Modificado
+## 2. Franja de números — ✏️ Actualizado
 
-Tres cifras que cuentan hacia arriba cuando aparecen en pantalla: **50+ Años de trayectoria** · **3 Certificaciones internacionales** · **100% Producción integrada**.
+Tres cifras que cuentan hacia arriba al aparecer en pantalla: **50+ Años de trayectoria** · **3 Certificaciones internacionales** · **100% Producción integrada**.
 
-**Qué cambió:** decía "45+ años". Ahora dice **50+**.
+La antigüedad quedó en **50+**, según lo definido en la planilla.
 
 ## 3. Los dos servicios — ✅ Se mantiene
 
 Dos paneles a pantalla partida, cada uno con su foto: **Prospectos & Impresos** y **Etiquetas**. Al pasar el mouse por uno, se agranda y el otro se achica; la foto hace un zoom lento y aparece el botón "Ver servicio". En celular quedan uno arriba del otro.
 
-> 📌 **Pendiente de definición.** En la planilla quedó un mensaje cortado sobre el título del panel "Prospectos & Impresos". Hace falta que Neuhaus confirme el texto exacto.
+> 📌 **A definir.** En la planilla quedó un mensaje cortado sobre el título del panel "Prospectos & Impresos". Hace falta que Neuhaus confirme el texto exacto.
 
-## 4. Tecnología y control en cada etapa — ➖ Se sacó
+## 4. Tecnología y control en cada etapa — ➖ Desactivada
 
 Eran cuatro tarjetas: Electronic Verification, Sistema Laetus, Cadena integrada y Escala flexible.
 
-Se desactivó tal como se pidió en la planilla. **La sección no se borró:** quedó guardada, así que si alguna vez se quiere volver a mostrar es cuestión de minutos.
+Se retiró de la vista tal como se indicó en la planilla. **La sección no se eliminó:** quedó guardada en el proyecto, así que reactivarla en el futuro es cuestión de minutos.
 
-Tiene sentido sacarla: ese contenido está desarrollado con mucho más detalle en la página de Calidad, y en la portada estaba duplicado.
+El criterio acompaña bien: ese contenido está desarrollado con mucho más detalle en la página de Calidad, y la portada gana foco sin él.
 
-## 5. Sectores — ✏️ Modificado
+## 5. Sectores — ✏️ Actualizado
 
 Una grilla de cuatro fotos en distintos tamaños. Cada una muestra el nombre del sector, y al pasar el mouse aparece la descripción.
 
-**El título** decía *"Sectores que confían en nosotros"* → ahora dice **"NEUHAUS, una marca instalada desde hace 50 años."**
+**Título:** **"NEUHAUS, una marca instalada desde hace 50 años."**
 
-**La bajada** decía *"Desde corporaciones internacionales hasta productores artesanales…"* → ahora dice *"Desde multinacionales hasta pequeños productores locales, nuestra flexibilidad nos permite adaptarnos a la escala de nuestros clientes."*
+**Bajada:** *"Desde multinacionales hasta pequeños productores locales, nuestra flexibilidad nos permite adaptarnos a la escala de nuestros clientes."*
 
 **Los cuatro sectores:**
 
-| Sector | Descripción | Estado |
-|---|---|---|
-| Laboratorios & Farmacéuticas | Calidad y precisión técnica para prospectos. Cumplimiento estricto de normas BPM e ISO 9001. | ✏️ Se sacó "y estuchería" — Neuhaus no fabrica estuches |
-| Cosmética & Cuidado Personal | Etiquetas de alta definición que destacan en góndola. Tintas UV, especiales y Stamping. | ✅ Igual |
-| Alimentos & Bebidas | Materiales y adhesivos aptos para toda la cadena. Resistentes a humedad, fricción y frío. | ✅ Igual |
-| PyMEs y Emprendedores | Tiradas medias y bajas para todo tipo de proyecto. | ✏️ Antes: "Tiradas cortas y medianas con flexibilidad productiva" |
+| Sector | Descripción |
+|---|---|
+| **Laboratorios & Farmacéuticas** | Calidad y precisión técnica para prospectos. Cumplimiento estricto de normas BPM e ISO 9001. |
+| **Cosmética & Cuidado Personal** | Etiquetas de alta definición que destacan en góndola. Tintas UV, especiales y Stamping. |
+| **Alimentos & Bebidas** | Materiales y adhesivos aptos para toda la cadena. Resistentes a humedad, fricción y frío. |
+| **PyMEs y Emprendedores** | Tiradas medias y bajas para todo tipo de proyecto. |
 
-> 📌 **Pendiente de definición.** En la tarjeta de Cosmética, confirmar si "acabados premium" queda así o se cambia por "barnizados" u otra opción.
+Las descripciones de Laboratorios y PyMEs se ajustaron para que reflejen con precisión lo que produce la planta.
+
+> 📌 **A definir.** En la tarjeta de Cosmética, confirmar si "acabados premium" queda así o se cambia por "barnizados" u otra opción.
 
 ## 6. Calidad certificada — ✅ Se mantiene
 
@@ -134,100 +130,99 @@ Una franja oscura sobre foto de planta, con los logos de **ISO 9001:2015**, **BP
 
 # 🏭 Nosotros
 
-## 1. Encabezado — ✏️ Modificado
+## 1. Encabezado — ✏️ Actualizado
 
-Foto del equipo en planta a pantalla completa, con el título encima.
+Foto del equipo en planta a pantalla completa, con el título encima:
 
-Decía *"Una empresa familiar que se convirtió en referente de la industria gráfica Argentina"*, después pasó a *"Desde 1979…"* y hoy dice: **"Desde 1976, imprimiendo para la industria nacional."**
+> **"Desde 1976, imprimiendo para la industria nacional."**
 
-## 2. Nuestra historia — ✏️ Modificado
+## 2. Nuestra historia — ✏️ Actualizado
 
-**El diseño se rehízo.** Antes eran cuatro tarjetas numeradas (01, 02, 03, 04). Ahora es una **línea de tiempo**: en escritorio los tres hitos se despliegan horizontalmente con el año grande arriba, un punto sobre la línea y el texto abajo; en celular la línea baja en vertical. Se lee mucho mejor como cronología.
+**El diseño se rehízo como línea de tiempo.** En escritorio los tres hitos se despliegan horizontalmente, con el año en grande arriba, un punto sobre la línea y el texto abajo; en celular la línea baja en vertical. Se lee mucho mejor como cronología que como tarjetas sueltas.
 
-**La bajada** decía "Más de cuatro décadas…" → ahora **"Más de cinco décadas de experiencia en la industria gráfica argentina."**
+**Bajada:** *"Más de cinco décadas de experiencia en la industria gráfica argentina."*
 
 **Los hitos:**
 
-**1976 — Fundación** ✏️ *(antes 1979)*
+**1976 — Fundación**
 > "Empezamos como todas las pymes, como un pequeño taller gráfico dedicado a impresiones comerciales, pero nuestra seriedad y calidad nos llevaron a trabajar para grandes compañías."
 
-**1987 — Neuhaus S.A.** ✏️
+**1987 — Neuhaus S.A.**
 > "El gran volumen de trabajo, más el acceso al crédito y modernas tecnologías nos impulsaron a convertirnos en NEUHAUS SA Industria Gráfica."
 
 **Hoy — Presente** ✅ *(sin cambios, como se indicó en la planilla)*
 > "Fabricamos etiquetas autoadhesivas y prospectos —planos y en rollo— para diversas industrias. Respaldados por certificaciones ISO 9001, BPM y FSC, y tecnología de verificación electrónica en cada etapa del proceso."
 
-## 3. Banner con la frase — ✏️ Modificado
+## 3. Banner con la frase — ✏️ Actualizado
 
-Franja a pantalla completa sobre una foto de impresión offset con efecto parallax (la foto se mueve más lento que el texto al bajar).
+Franja a pantalla completa sobre una foto de impresión offset con efecto parallax: la foto se desplaza más lento que el texto al bajar.
 
-**Este era el último punto abierto de la planilla.** El pedido original era sacar el texto; después se confirmó que la sección queda y solo se corrige el número:
+**Este era el último punto abierto de la planilla.** Se confirmó que la sección queda, con la antigüedad actualizada:
 
 > **"Nuestros más de 50 años de experiencia en el rubro se reflejan en cada trabajo."**
 
-*(Antes decía 40 años. Y antes de eso, en el sitio original, era una cita entre comillas y en cursiva que hablaba de 45 años.)*
+## 4. Objetivo, Proyección y Valores — ✏️ Actualizado
 
-## 4. Objetivo, Proyección y Valores — ✏️ Modificado
+Dos tarjetas lado a lado y un bloque ancho debajo. **La sección se rehízo entera** con los textos definidos por Neuhaus.
 
-Dos tarjetas lado a lado y un bloque ancho abajo. **Se rehízo entera.**
-
-**"Misión" pasó a llamarse "Objetivo":**
+**Objetivo**
 > "Nuestro objetivo: responder con velocidad y calidad."
 >
 > "Con procesos 100% integrados, tecnología de verificación propia y control en cada etapa, garantizamos una respuesta ágil para la industria farmacéutica, cosmética y alimenticia, sin resignar precisión."
 
-**"Visión" pasó a llamarse "Proyección":**
+**Proyección**
 > "Queremos seguir innovando en soluciones gráficas para la industria farmacéutica, cosmética y alimenticia."
 >
 > "Buscamos expandir nuestra presencia en el mercado, consolidándonos como proveedores preferidos, ofreciendo productos de alta calidad y cumpliendo con los más altos estándares de seguridad y calidad."
 
-**Valores:** se sacaron las descripciones y quedaron **solo los cinco títulos**, como se pidió — Compromiso con la calidad · Innovación · Responsabilidad · Trabajo en equipo · Mejora continua.
+**Valores:** quedaron **solo los cinco títulos**, como se indicó — Compromiso con la calidad · Innovación · Responsabilidad · Trabajo en equipo · Mejora continua.
 
-Al quitar las descripciones, los cinco títulos quedaban flotando en una grilla enorme con mucho aire vacío. **Se rediseñaron como etiquetas compactas en una sola fila**, cada una con su punto. Se respeta el pedido y la sección se ve prolija en vez de a medio terminar.
+Al ir sin descripciones, cinco títulos sueltos en una grilla amplia dejaban mucho espacio vacío. **Se rediseñaron como etiquetas compactas en una sola fila**, cada una con su punto. Se respeta el pedido y la sección queda visualmente resuelta.
 
-## 5. Lo que nos representa — ➖ Se sacó
+## 5. Lo que nos representa — ➖ Desactivada
 
 Eran cuatro tarjetas: Calidad de producto, Confianza sostenida, Atención personalizada y Mejora continua.
 
-Se desactivó porque **repetía contenido**: "Mejora continua" aparecía también en el bloque de Valores, en la misma página. La planilla lo marcaba dos veces ("sacar" y "se repite"). Igual que la otra, quedó guardada y no borrada.
+Se retiró de la vista según lo indicado en la planilla, que la marcaba como superpuesta con el bloque de Valores de la misma página. Igual que la otra, quedó guardada en el proyecto y no eliminada.
 
-## 6. Nuestra planta — ✏️ Modificado
+## 6. Nuestra planta — ✏️ Actualizado
 
-Galería de **12 fotos de planta** en carrusel, con flechas a los costados y una barra de progreso abajo. Muestra 3 fotos en escritorio, 2 en tablet y 1 en celular. Las fotos hacen zoom al pasar el mouse.
+Galería de **12 fotos de planta** en carrusel, con flechas a los costados y barra de progreso abajo. Muestra 3 fotos en escritorio, 2 en tablet y 1 en celular, con zoom al pasar el mouse.
 
-**Qué cambió:** el texto quedó igual, pero **las 12 fotos compartían la misma descripción genérica ("Planta Neuhaus")**. Ahora cada una tiene la suya, específica: "Impresora offset de la planta de Neuhaus", "Sector de terminación y doblado", "Departamento de calidad interno"… Sirve para lectores de pantalla y para que Google entienda qué muestra cada imagen.
+El texto se mantiene. **Cada foto recibió su propia descripción** —"Impresora offset de la planta de Neuhaus", "Sector de terminación y doblado", "Departamento de calidad interno"—, lo que sirve tanto para lectores de pantalla como para que Google entienda qué muestra cada imagen.
 
-También cambió el color de fondo, para recuperar la alternancia visual que se rompió al sacar "Lo que nos representa".
+También se ajustó el color de fondo, para sostener la alternancia visual de la página con las secciones desactivadas.
 
 > 📌 **Material pendiente.** Neuhaus va a reemplazar estas fotos por otras de mayor calidad.
 
-## 7. Certificaciones — ✏️ Modificado
+## 7. Certificaciones — ✏️ Actualizado
 
 Tres tarjetas con el logo del organismo, el nombre y una explicación de qué garantiza cada certificación: **ISO 9001**, **BPM** y **FSC® Cadena de Custodia**.
 
-**Qué cambió:** en el sitio anterior esta sección estaba escrita **dos veces**, una para Nosotros y otra para Calidad, casi idénticas pero por separado. Cualquier corrección había que hacerla dos veces, y con el tiempo se iban a desincronizar. Ahora es **una sola sección compartida** por las dos páginas, con una variante visual para cada una.
+Esta sección aparece tanto en Nosotros como en Calidad. **Se unificó en un único componente compartido** con una variante visual para cada página: cualquier corrección futura se hace una sola vez y se refleja en las dos, sin riesgo de que queden diciendo cosas distintas.
 
-También se cambió el color de fondo, que quedaba igual al de "Nuestra planta" y hacía que las dos secciones se leyeran como un solo bloque.
-
-> 📌 **Material pendiente.** Faltan los logos de las certificaciones en buena calidad. Hoy BPM usa el logo de IRAM, igual que ISO 9001.
+> 📌 **Material pendiente.** Faltan los logos de las certificaciones en alta calidad. Hoy BPM comparte el logo de IRAM con ISO 9001.
 
 ---
 
 # 📄 Prospectos & Impresos
 
-## 1. Encabezado — ✏️ Modificado
+## 1. Encabezado — ✏️ Actualizado
 
-**Título:** decía *"Todo lo que se imprime en papel, lo resolvemos"* → ahora **"En Neuhaus, atendemos toda necesidad de impresión."**
+> **"En Neuhaus, atendemos toda necesidad de impresión."**
+> "Prospectos medicinales, folletería comercial, recetarios, revistas y anotadores. Tecnología offset, flexo y digital, múltiples formatos de entrega."
 
-**Bajada:** decía *"…material de marketing, anotadores y blocks. Tecnología offset y digital…"* → ahora **"Prospectos medicinales, folletería comercial, recetarios, revistas y anotadores. Tecnología offset, flexo y digital, múltiples formatos de entrega."**
+La bajada nombra ahora las tres tecnologías de la planta y los formatos de entrega, que son los dos ejes de decisión de un comprador.
 
-## 2. Producción en pliegos — ✏️ Modificado
+## 2. Producción en pliegos — ✏️ Actualizado
 
-Título grande, un párrafo al costado y una fila de etiquetas redondeadas con todo lo que se produce.
+Título grande, un párrafo al costado y una fila de etiquetas redondeadas con todo lo que se produce:
 
-**Las etiquetas de hoy:** Prospectos medicinales · Prospectos cosméticos · Folletería comercial · Recetarios · Revistas y catálogos · Anotadores y blocks, más una última con borde punteado que dice **"¿Necesitás algo más?"** y lleva a Contacto.
+Prospectos medicinales · Prospectos cosméticos · Folletería comercial · Recetarios · Revistas y catálogos · Anotadores y blocks
 
-**Qué cambió:** se eliminaron dos etiquetas que repetían lo mismo ("Material de marketing" y "Papelería comercial" ya estaban cubiertas por "Folletería comercial"), y el párrafo decía *"desde preprensa hasta despacho"* → ahora **"hasta entrega"**.
+Cierra con una etiqueta de borde punteado que dice **"¿Necesitás algo más?"** y lleva a Contacto.
+
+El listado se depuró para que cada etiqueta represente una línea distinta, sin superposiciones, y el párrafo describe el alcance real del proceso: *"Todo el proceso dentro de nuestra planta, desde preprensa hasta entrega."*
 
 ## 3. Formatos de entrega — ✅ Se mantiene
 
@@ -235,19 +230,19 @@ Tres tarjetas: **Planos** (pliegos sin doblar), **Doblados** (procesados dentro 
 
 Es una sección comercialmente fuerte: responde directo a cómo va a envasar el cliente.
 
-## 4. Tecnologías — ✏️ Modificado
+## 4. Tecnologías — ✏️ Actualizado
 
-Tres bloques grandes, alternando foto y texto de lado. Cada uno tiene su etiqueta de color, un título, una descripción y una ficha con dos datos: **Formato** e **Ideal para**.
+Tres bloques grandes, alternando foto y texto de lado. Cada uno con su etiqueta de color, título, descripción y una ficha con dos datos: **Formato** e **Ideal para**.
 
-| Tecnología | Formato | Ideal para | Estado |
+| Tecnología | Formato | Ideal para | |
 |---|---|---|---|
-| **Offset** — alta resolución en pliegos, precisión de color y nitidez tipográfica | Pliego a pliego | Tirajes largos y medios | ✅ Igual |
-| **Flexo** — para tirajes que precisen terminación en bobina, alta velocidad y reproducibilidad constante | Terminación a bobina o pliego | Tirajes largos y medios | 🆕 **Bloque nuevo** |
-| **Digital** — sin planchas, sin mínimos elevados, para muestras y pruebas | Terminación a bobina | Muestras y bajo volumen | ✏️ Reescrito |
+| **Offset** — alta resolución en pliegos, precisión de color y nitidez tipográfica | Pliego a pliego | Tirajes largos y medios | ✅ |
+| **Flexo** — para tirajes que precisen terminación en bobina, alta velocidad y reproducibilidad constante | Terminación a bobina o pliego | Tirajes largos y medios | 🆕 **Nuevo** |
+| **Digital** — sin planchas, sin mínimos elevados, para muestras y pruebas | Terminación a bobina | Muestras y bajo volumen | ✏️ |
 
-**El bloque de Flexo no existía**: la página hablaba solo de offset y digital, cuando la flexografía es una de las capacidades centrales de la planta.
+**El bloque de Flexo se incorporó en esta etapa.** La flexografía es una de las capacidades centrales de la planta y ahora tiene su lugar propio junto a offset y digital.
 
-**En Digital** se eliminó la frase *"donde offset no es rentable"* —que argumentaba en contra del propio servicio— y el dato "Sin costos de plancha".
+El texto de Digital se reescribió para que describa el caso de uso en positivo —muestras, pruebas, bajo volumen— en lugar de definirse por contraste con offset.
 
 > 📌 **Material pendiente.** El bloque de Flexo usa una foto genérica. Falta una foto real de la máquina.
 
@@ -260,11 +255,9 @@ Franja oscura con parallax sobre una foto de la línea de verificación:
 
 Con un enlace a la página de Calidad. Es exactamente el tipo de afirmación concreta y verificable que buscan tanto un jefe de compras como los buscadores con IA.
 
-## 6. Formulario de cotización — ✏️ Rehecho
+## 6. Formulario de cotización — ✏️ Rediseñado
 
-Antes pedía: nombre, empresa, email, teléfono, tipo de trabajo (desplegable), tiraje y mensaje.
-
-**Ahora pide lo que hace falta para cotizar de verdad:**
+Los campos se replantearon para que una consulta llegue con todo lo necesario para cotizar sin una llamada previa:
 
 | Campo | Tipo |
 |---|---|
@@ -278,9 +271,7 @@ Antes pedía: nombre, empresa, email, teléfono, tipo de trabajo (desplegable), 
 | Terminación | Plano / Doblado simple / Doblado múltiple |
 | Mensaje adicional | opcional |
 
-El botón dice **"Solicitar cotización"** (antes "Enviar consulta").
-
-Con los campos anteriores, toda cotización arrancaba con una llamada para preguntar lo básico.
+Botón: **"Solicitar cotización"**.
 
 ---
 
@@ -306,9 +297,9 @@ Dos tarjetas que muestran que la planta cubre los dos extremos:
 
 Foto de etiquetas terminadas junto a un texto sobre tintas UV y resistencia al roce y la manipulación.
 
-## 5. Formulario de cotización — ✏️ Rehecho
+## 5. Formulario de cotización — ✏️ Rediseñado
 
-Igual que en Prospectos, con los campos propios de etiquetas:
+Mismo criterio que en Prospectos, con los campos propios de etiquetas:
 
 | Campo | Tipo |
 |---|---|
@@ -319,62 +310,58 @@ Igual que en Prospectos, con los campos propios de etiquetas:
 | **Sustrato** | BOPP blanco / BOPP transparente / BOPP metalizado / Ilustración / Martelé / Otro |
 | Mensaje adicional | opcional |
 
-> 💡 **Oportunidad detectada.** Esta página **no tiene ninguna sección sobre control de calidad**, que es el diferenciador más fuerte de Neuhaus. Prospectos sí la tiene ("Cada pliego, verificado").
+> 💡 **Oportunidad.** Esta página no tiene una sección dedicada al control de calidad, que es el diferenciador más fuerte de Neuhaus — Prospectos sí la tiene ("Cada pliego, verificado").
 >
-> En el sitio original existía una sección escrita para esto —*"Código de barras verificado en cada etiqueta"*, sobre la verificación Laetus— pero **nunca llegó a mostrarse**: el archivo estaba hecho y quedó sin conectar a la página. No se perdió en la migración; ya estaba así.
->
-> Recuperarla es trabajo menor y le agrega a la página el argumento que hoy le falta. **Queda a definición de Neuhaus.**
+> Existe una sección ya escrita para esto, *"Código de barras verificado en cada etiqueta"*, sobre la verificación Laetus aplicada a cada unidad producida. Incorporarla es trabajo menor y le suma a la página el argumento técnico que hoy le falta. **Queda a definición de Neuhaus.**
 
 ---
 
 # ✅ Calidad
 
-## 1. Encabezado — ✏️ Modificado
+## 1. Encabezado — ✏️ Actualizado
 
 > **"La calidad no es un resultado. Es un proceso."**
 
-**Qué cambió:** se sacó la bajada que decía *"Cada trabajo que sale de nuestra planta pasó por un sistema de control que pocos proveedores gráficos pueden ofrecer"*, tal como pedía la planilla. Queda solo el título.
+Queda solo el título, sin bajada, como se indicó en la planilla. Gana contundencia.
 
-## 2. Nuestro Sistema — ✏️ Modificado
+## 2. Nuestro Sistema — ✏️ Actualizado
 
-Texto a la izquierda, foto a la derecha. **El texto se reemplazó por completo:**
+Texto a la izquierda, foto a la derecha:
 
-> "En Neuhaus entendemos que los errores cuestan caro: un prospecto manchado, un **código de barras** que no funciona o una etiqueta ilegible pueden tener consecuencias de impacto.
+> "En Neuhaus entendemos que los errores cuestan caro: un prospecto manchado, un código de barras que no funciona o una etiqueta ilegible pueden tener consecuencias de impacto.
 >
 > Por eso construimos un sistema de control integrado en cada etapa del proceso, con tecnología específica para la detección de errores y un departamento de calidad propio dentro de la planta, para poder detectar y evitar hasta el más mínimo error."
 
-*(Este párrafo decía "un QR que no funciona".)*
-
-## 3. Sistemas de control — ✏️ Modificado
+## 3. Sistemas de control — ✏️ Actualizado
 
 Tres tarjetas desplegables. Cada una muestra una foto con el nombre encima y un botón "Quiero saber más" que abre la explicación.
 
-**Electronic Verification** ✅
+**Electronic Verification**
 > "Compara en tiempo real cada pliego impreso contra el PDF aprobado por el cliente. Cualquier diferencia —tipográfica, cromática o estructural— es detectada y separada antes de que el trabajo avance en la línea de producción."
 
-**Sistema Laetus** ✏️ *(corregido)*
-> "Lector integrado en las dobladoras que verifica la legibilidad del **código de barras** en cada pliego individual. Si el código no se lee correctamente, el pliego es detectado y separado automáticamente."
+**Sistema Laetus**
+> "Lector integrado en las dobladoras que verifica la legibilidad del código de barras en cada pliego individual. Si el código no se lee correctamente, el pliego es detectado y separado automáticamente."
 
-**Departamento de Calidad** ✅
+**Departamento de Calidad**
 > "Equipo propio dentro de la planta que supervisa cada etapa del proceso. No tercerizamos el control. Desde preprensa hasta despacho, todo es auditado internamente."
+
+Siguiendo la indicación de la planilla, la descripción del sistema Laetus se precisó en todo el sitio: **verifica códigos de barras**. Es un dato técnico que un comprador del sector reconoce, y ahora está expresado con exactitud en las cinco menciones que tiene el sitio.
 
 ## 4. Certificados por los organismos más exigentes — ✅ Se mantiene
 
-Las mismas tres tarjetas de certificaciones de la página Nosotros (ahora compartidas, no duplicadas), más un bloque para **descargar la Política de Calidad en PDF**.
+Las mismas tres tarjetas de certificaciones de la página Nosotros —ahora compartidas desde un único componente—, más un bloque para **descargar la Política de Calidad en PDF**.
 
-## 5. Cadena de producción integrada — ✏️ Modificado
+## 5. Cadena de producción integrada — ✏️ Actualizado
 
 Franja oscura con parallax donde los pasos del proceso se encadenan con flechas: horizontal en escritorio, vertical en celular.
 
-**Pasó de 6 pasos a 9.** Se separaron los controles EV y Laetus en etapas propias, para reflejar el proceso real de la planta:
+**La secuencia se detalló a nueve pasos**, separando los controles EV y Laetus en etapas propias para reflejar el proceso real de la planta:
 
 > Recepción de diseño → Preprensa → **Control EV al primer pliego impreso** → Impresión → **Control EV** → Doblado / Terminación → **Control de lectura Laetus a código de barras** → Acondicionado en cajas → Entrega
 
-*(Ese séptimo paso decía "Control de lectura Laetus a QR".)*
-
 Cierra con: *"Todo el proceso ocurre dentro de nuestra planta. Sin tercerizar. Sin puntos ciegos. Con trazabilidad completa en cada etapa de producción."*
 
-Que **tres de los nueve pasos sean controles de calidad** es en sí mismo el argumento de venta de la página.
+Que **tres de los nueve pasos sean controles de calidad** es, en sí mismo, el argumento de venta de la página.
 
 ## 6. Cierre — ✅ Se mantiene
 
@@ -389,19 +376,20 @@ Que **tres de los nueve pasos sean controles de calidad** es en sí mismo el arg
 > **"Hablemos de tu proyecto."**
 > "Completá el formulario o escribinos directamente. Te respondemos a la brevedad."
 
-## 2. Formulario — ✏️ Rehecho por dentro
+## 2. Formulario — ✏️ Rediseñado por dentro
 
-A la vista es el mismo formulario de siempre. **Por dentro cambió todo:** antes no enviaba nada. El detalle está en la Parte 4.
+Mismo formulario a la vista, con procesamiento en el servidor. El detalle está en la Parte 4.
 
-## 3. Datos de contacto — ✏️ Modificado
+## 3. Datos de contacto — ✏️ Actualizado
 
-Dirección, email, teléfono, redes sociales, el bloque de reseñas y el mapa.
+Dirección, email, teléfono, redes sociales, reseñas y mapa.
 
-**Qué cambió:**
-- **El teléfono** decía **4925-6363**. El correcto es **+54 11 4925-6364**. Corregido en el texto y en el link que marca desde el celular — antes, quien tocaba el número desde un celular llamaba a un número equivocado.
-- **El código postal** (C1238AAA) no estaba. Se agregó.
-- **El mapa** apuntaba a *"Colomb**e**s 1065"*, con la calle mal escrita. Corregido.
-- 🆕 **Bloque de reseñas:** **4,7 ★ · 20 opiniones en Google**, enlazado al perfil. No aparecía en el sitio anterior.
+- **Dirección completa con código postal:** Colombres 1065, Boedo, C1238AAA, CABA
+- **Teléfono en formato internacional** —+54 11 4925-6364— con enlace directo para llamar desde el celular
+- **Mapa** apuntando a la ubicación exacta
+- 🆕 **Bloque de reseñas:** **4,7 ★ · 20 opiniones en Google**, enlazado al perfil
+
+Todos esos datos salen del archivo único de la empresa y están verificados contra el perfil de Google Business, que es la referencia que usan los buscadores para confirmar la identidad de una empresa.
 
 **Se mantienen** los tres enlaces a redes: LinkedIn, Facebook e Instagram.
 
@@ -409,72 +397,67 @@ Dirección, email, teléfono, redes sociales, el bloque de reseñas y el mapa.
 
 # Parte 4 — Los formularios
 
-Este es el punto que más plata estaba costando, y no estaba en el pedido original.
+Los tres formularios del sitio —Contacto, cotización de Prospectos y cotización de Etiquetas— se construyeron sobre el mismo motor, procesado en el servidor.
 
-## Cómo funcionaba antes
+**Cómo funcionan:**
 
-Los tres formularios (Contacto, Prospectos y Etiquetas) validaban los campos, mostraban una animación de carga y después el cartel verde de **"¡Mensaje enviado!"**.
+- **La validación corre en el servidor**, no en el navegador, de modo que no puede saltearse ni falsificarse desde afuera.
+- **El mensaje se envía por correo** a la casilla que se defina, identificando de qué formulario proviene: Contacto, Cotización de Prospectos o Cotización de Etiquetas.
+- **El remitente queda configurado para responder**: al dar Responder, la respuesta va directo al mail de quien completó el formulario.
+- **Hay una trampa anti-spam** invisible para el usuario, que evita tener que poner un captcha.
+- **Si el envío no se concreta, el formulario lo informa** y muestra el teléfono y el mail de Neuhaus para que la persona pueda contactarse igual. Nunca se muestra una confirmación que no se corresponda con un envío real.
 
-Pero no había ningún envío. El mensaje no salía del navegador de la persona. **Cada consulta cargada desde que el sitio está online se perdió, y esa persona se fue creyendo que Neuhaus la había recibido.**
-
-## Cómo funciona ahora
-
-- **La validación corre en el servidor**, no en el navegador, así que no se puede saltear ni falsificar.
-- **El mensaje se envía por correo** a la casilla que se defina, identificando de qué formulario vino (Contacto, Cotización de Prospectos o Cotización de Etiquetas).
-- **Hay una trampa anti-spam** invisible para el usuario, que no molesta con captchas.
-- **Si el envío falla, el formulario lo dice.** Muestra un error real con el teléfono y el mail de Neuhaus para que la persona pueda contactarse igual. Nunca más un "mensaje enviado" que no es cierto.
-
-> ⚠️ **Falta un paso para que empiecen a llegar los mails.** El código está terminado y probado, pero hace falta crear una cuenta en el servicio de envío (Resend, gratuito para este volumen) y definir a qué casilla llegan las consultas. Son unos quince minutos de trámite.
+> ⚠️ **Pendiente para activarlos.** Falta crear la cuenta en el servicio de envío de correo (Resend, gratuito para este volumen) y definir a qué casilla llegan las consultas. Son unos quince minutos de trámite, sin trabajo de programación asociado.
+>
+> Hasta que esté configurado, los formularios muestran el mensaje con los datos de contacto directo en lugar de una confirmación de envío.
 
 ---
 
-# Parte 5 — El trabajo que no se ve
+# Parte 5 — El trabajo de base
 
-## Por qué había que rehacer el sitio
+## La migración
 
-El sitio anterior armaba la página **dentro del navegador de quien la visitaba**. Funciona bien para una aplicación, pero para un sitio que necesita ser encontrado tiene un problema de raíz: lo que recibe un buscador es una página vacía, y el contenido aparece recién después.
+El sitio se llevó a **Next.js 16**, el framework de referencia para sitios cuyo objetivo es posicionar. Es una reescritura completa del proyecto, manteniendo el diseño y sumando la capa que hace posible el trabajo de SEO y GEO.
 
-Google sabe esperar. Bing, WhatsApp, LinkedIn y **todos los buscadores con inteligencia artificial, no**. Para ellos el sitio estaba en blanco.
+La diferencia de fondo: las páginas se **generan completas de antemano**, no dentro del navegador de quien las visita. Quien las pide —una persona, Google o ChatGPT— recibe el documento entero de una, con todo el texto adentro. Es lo que permite que los buscadores con inteligencia artificial puedan leer el sitio, porque sus rastreadores no ejecutan JavaScript.
 
-Eso no se arregla con ajustes: era la arquitectura. Ahora las páginas se **generan completas de antemano**, y cualquiera que las pida recibe el documento entero de una.
-
-## Las direcciones no cambiaron
-
-Las seis páginas conservan exactamente la misma URL. `/nosotros` sigue siendo `/nosotros`.
-
-Importa más de lo que parece: cambiar direcciones significa perder la autoridad que Google ya le reconoce a cada página y romper todos los links que existan en otros lados. **No hubo que hacer una sola redirección.**
+**Las seis direcciones se conservaron intactas.** `/nosotros` sigue siendo `/nosotros`. Fue una condición de la migración: mantener las direcciones significa conservar la autoridad que Google ya le reconoce a cada página y que ningún enlace externo se rompa. No hizo falta una sola redirección.
 
 ## Las imágenes
 
-Las 48 fotos originales sumaban **83 MB**: archivos salidos directo de la cámara, algunos de 5 MB cada uno, con nombres como `_1033737.JPG`.
+Las fotos de planta son archivos de cámara de alta resolución. Se procesaron todas para web: redimensionadas, convertidas a formatos modernos y renombradas con nombres descriptivos —`impresion-offset-prospectos.webp` en lugar de un código de cámara—, porque el nombre del archivo también es una señal que Google lee.
 
-Se procesaron todas: se redimensionaron, se convirtieron a formatos modernos y se renombraron con nombres descriptivos (`impresion-offset-prospectos.webp` — el nombre del archivo también lo lee Google). Cada foto se sirve además en el tamaño que corresponde a la pantalla: un celular no descarga la versión de escritorio.
+Cada foto se sirve además en el tamaño que corresponde a cada pantalla: un celular no descarga la versión de escritorio.
 
-**Las imágenes que usa el sitio pasaron de casi 70 MB a 5,8 MB. El banner principal, de 3,24 MB a 43 KB.**
-
-En celular —de donde viene la mayoría del tráfico— era el problema más grave que tenía el sitio.
+**El sitio completo quedó en 5,8 MB de imágenes, y el banner principal de la portada pesa 43 KB.** En celular, de donde llega la mayor parte del tráfico, es lo que separa una página que aparece de inmediato de una que se hace esperar.
 
 ## Un solo lugar para los datos de la empresa
 
-La dirección estaba escrita a mano en tres archivos y el teléfono en dos. Así es exactamente como se cuela un dígito equivocado y sobrevive meses sin que nadie lo note.
+Dirección, teléfono, email, año de fundación, certificaciones y valoración de Google viven en **un único archivo** del que se alimentan el pie de página, la página de Contacto, el mapa, los datos estructurados que lee Google y el resumen para buscadores con IA.
 
-Ahora **hay un único archivo** del que se alimentan el pie de página, la página de Contacto, el mapa, los datos que lee Google y el resumen para buscadores con IA. Se corrige en un lugar y cambia en todos.
+Se edita en un lugar y cambia en todo el sitio. Es lo que garantiza que ninguna página quede diciendo algo distinto de otra, algo que los buscadores verifican activamente al cruzar los datos de una empresa entre fuentes.
 
-Lo mismo con el año de fundación: el sitio anterior daba **cinco cifras distintas** de antigüedad según en qué página estuvieras ("45+", "más de 45 años", "más de 40 años", "cuatro décadas", "desde 1979"). Hoy hay un solo dato, **1976**, del que se derivan todos los textos. La cuenta cierra —1976 + 50 = 2026— y no se va a volver a desincronizar el año que viene.
+El mismo criterio se aplicó a la antigüedad: **1976** es el dato único del que se derivan todos los textos del sitio. La cuenta cierra —1976 + 50 = 2026— y no requiere mantenimiento manual el año que viene.
 
-## Otros arreglos
+## Las vistas previas al compartir
 
-**Las tipografías** se sirven desde el propio sitio en lugar de pedirlas a Google en cada visita. Carga más rápido y el texto ya no "salta" cuando termina de cargar la fuente.
+Cuando alguien pasa un link del sitio por WhatsApp, LinkedIn o Slack, la vista previa muestra el título, la descripción y una **imagen de marca de 1200 × 630 px**.
 
-**Accesibilidad.** Todas las imágenes tienen descripción propia, los controles del carrusel se pueden usar sin mouse, hay un atajo para saltar directo al contenido y el HTML usa etiquetas con significado real —listas de verdad para la cadena de producción y los hitos históricos, fichas de definición para los datos técnicos de cada tecnología— en lugar de cajas genéricas. Sirve para personas con lectores de pantalla y Google lo pondera.
+Esas imágenes se **generan por código, una distinta por página**, con la identidad visual de Neuhaus: fondo azul de marca, nombre de la empresa, el título propio de esa página, las tres certificaciones y el dominio. El link de Calidad muestra *"La calidad no es un resultado. Es un proceso."*; el de Etiquetas, *"Etiquetas autoadhesivas en rollo."*
 
-**El sitio anterior quedó intacto** como respaldo, en su propia carpeta y funcionando. Nada se pisó.
+La ventaja de resolverlo así en vez de con una imagen fija: cada página comparte su propio mensaje, y no depende de producir una pieza de diseño aparte. Si más adelante Neuhaus quiere reemplazarlas por material propio, se sustituyen sin tocar nada más.
+
+## Otros trabajos de base
+
+**Las tipografías** se sirven desde el propio sitio en lugar de solicitarlas a un servidor externo en cada visita. Carga más rápida y sin desplazamiento del texto al terminar de cargar la fuente.
+
+**Accesibilidad.** Todas las imágenes llevan descripción propia, los controles del carrusel se pueden operar sin mouse, hay un atajo para saltar directo al contenido y el HTML usa etiquetas con significado real —listas de verdad para la cadena de producción y los hitos históricos, fichas de definición para los datos técnicos de cada tecnología—. Sirve para personas que usan lectores de pantalla, y Google lo pondera como factor de calidad.
 
 ---
 
 # Parte 6 — Qué falta
 
-**El código está terminado.** Lo que sigue son decisiones, trámites y materiales.
+**El desarrollo está terminado.** Lo que sigue son definiciones, trámites y materiales.
 
 ## Para poder publicar
 
@@ -482,32 +465,31 @@ Lo mismo con el año de fundación: el sitio anterior daba **cinco cifras distin
 |---|---|---|
 | **Casilla de los formularios** | Neuhaus | ¿A qué mail llegan las consultas? ¿Copia a alguien más? |
 | **Cuenta de envío de correo** | Neuhaus + nosotros | Crear la cuenta en Resend y verificar el dominio. Gratis para este volumen |
-| **Dónde se hospeda el sitio** | Neuhaus | El hosting actual (Apache) no puede correr esta tecnología. Recomendación: Vercel — gratis para este sitio, se publica en minutos |
-| **El dominio** | Neuhaus | `imprentaneuhaus.com` queda como principal (es el que figura en Google). `neuhaus.com.ar` tiene que redirigir hacia él |
+| **Hosting** | Neuhaus | Recomendación: Vercel — se publica en minutos y está pensado para esta tecnología |
+| **Dominio oficial** | Neuhaus | **Recomendación: `neuhaus.com.ar`** — es el dominio de las casillas de correo de la empresa, y `.com.ar` suma señal geográfica de Argentina. `imprentaneuhaus.com` queda redirigiendo. Requiere actualizar la URL en el perfil de Google Business. Fundamentos en el documento 2 |
 
-## Materiales que faltan de Neuhaus
+## Materiales de Neuhaus
 
 - **Fotos propias para los sectores** de la portada: prospectos para Laboratorios, etiqueta para Cosmética, etiqueta para Alimentos
 - **Foto de la máquina flexográfica** para el bloque nuevo de Tecnologías
-- **Logos de las certificaciones** ISO 9001, BPM y FSC en buena calidad *(hoy BPM usa el logo de IRAM, igual que ISO)*
+- **Logos de las certificaciones** ISO 9001, BPM y FSC en alta calidad
 - **Fotos de planta de mayor calidad** para la galería de Nosotros
-- **Imagen de vista previa** (1200 × 630 px): hoy, al compartir un link por WhatsApp o LinkedIn, aparece el título y la descripción pero sin foto
 
 ## Definiciones de contenido
 
 - **Título del panel "Prospectos & Impresos"** en la portada: quedó un mensaje cortado en la planilla
 - **"Acabados premium"** en la tarjeta de Cosmética: ¿queda o se cambia por "barnizados"?
-- **Sección de control de calidad en Etiquetas**: recuperar o no la sección que nunca llegó a mostrarse
-- **"NEUHAUS 3G"**: ¿es un claim oficial y permanente? Ya está cargado como nombre alternativo de la empresa en los datos que lee Google, pero conviene confirmarlo
-- **Preguntas frecuentes**: la parte técnica está lista, falta redactar y aprobar las preguntas. Es el formato que más citan los buscadores con IA *(ver informe de SEO)*
-- **Fichas técnicas por servicio**: sustratos, gramajes, tamaños, tirajes mínimos y máximos, tiempos de entrega. Es lo primero que busca un jefe de compras y hoy no está en el sitio
-- **Bots de inteligencia artificial**: hoy el sitio les permite leer el contenido. Es una decisión de negocio y conviene tomarla a conciencia *(ver informe de SEO)*
+- **Sección de control de calidad en Etiquetas**: incorporar o no la sección ya escrita
+- **"NEUHAUS 3G"**: confirmar si es un claim oficial y permanente. Ya está cargado como nombre alternativo de la empresa en los datos que lee Google
+- **Preguntas frecuentes**: la estructura técnica está lista, faltan las preguntas. Es el formato que más citan los buscadores con IA *(ver documento 2)*
+- **Fichas técnicas por servicio**: sustratos, gramajes, tamaños, tirajes mínimos y máximos, tiempos de entrega. Es lo primero que consulta un jefe de compras
+- **Bots de inteligencia artificial**: el sitio les permite leer el contenido. Es una decisión de negocio y conviene tomarla a conciencia *(ver documento 2)*
 
 ---
 
 ## Cierre
 
-El sitio está terminado del lado del desarrollo: todos los cambios de la planilla están aplicados, los formularios funcionan de verdad, el sitio carga rápido y es legible tanto para Google como para los buscadores con IA. De paso se corrigieron un teléfono equivocado, una calle mal escrita, cinco cifras contradictorias de antigüedad y una afirmación técnica errónea repetida en cinco lugares.
+El sitio está terminado del lado del desarrollo: los cambios de contenido definidos con Neuhaus están todos aplicados, la base técnica soporta el trabajo de posicionamiento descripto en el documento 2, el sitio carga rápido y es legible tanto para Google como para los buscadores con IA.
 
 Lo que falta para publicarlo son cuatro definiciones, un conjunto de materiales fotográficos y algunas confirmaciones de contenido. Ninguna requiere volver a tocar el código.
 

@@ -1,93 +1,148 @@
 # Neuhaus S.A. — Sitio web
-## Informe de posicionamiento: Google y buscadores con IA
+## Estrategia de posicionamiento: SEO y GEO
 
 **Fecha:** 31 de julio de 2026
-**Dominio:** imprentaneuhaus.com
+**Dominio:** imprentaneuhaus.com o neuhaus.com.ar (pendiente)
 
-Este documento explica el trabajo de posicionamiento hecho sobre el sitio: qué se implementó, por qué, y qué depende de Neuhaus para completarlo. Las cifras están medidas sobre la versión final del sitio, no estimadas.
+Este documento explica cómo se pensó el posicionamiento del sitio: qué objetivo comercial persigue, con qué criterio se tomó cada decisión y cómo está construida la capa que hace que Neuhaus sea encontrada, tanto en Google como en los buscadores con inteligencia artificial.
 
-Va acompañado del documento **"1 - Trabajo realizado"**, que cuenta el resto del proyecto.
+Las cifras están medidas sobre el sitio terminado.
+
+Va acompañado del documento **"1 - Trabajo realizado"**, que recorre el resto del proyecto.
 
 ---
 
-## Antes de empezar: dos siglas
+## Dos siglas, para arrancar
 
 **SEO** es posicionarse en Google. Es lo conocido.
 
-**GEO** es lo nuevo: posicionarse en **ChatGPT, Perplexity, Gemini, Claude y los resúmenes con IA que Google muestra arriba de todo**. Cada vez más gente busca proveedores preguntándole a un asistente en lugar de escribir en Google. Cuando un jefe de compras de un laboratorio pregunta *"¿qué imprentas en Argentina hacen prospectos medicinales con control de calidad?"*, el objetivo es que Neuhaus aparezca en esa respuesta.
+**GEO** es lo nuevo: posicionarse en **ChatGPT, Perplexity, Gemini, Claude y los resúmenes con IA que Google muestra arriba de todo**. Cada vez más compradores industriales buscan proveedores preguntándole a un asistente en lugar de escribir en un buscador. Cuando el jefe de compras de un laboratorio pregunta *"¿qué imprentas en Argentina hacen prospectos medicinales con control de calidad?"*, el objetivo es que Neuhaus aparezca en esa respuesta.
 
-Es un canal joven, y esa es justamente la oportunidad: **la competencia todavía no está ahí**.
-
----
-
-# 1. El punto de partida
-
-El sitio anterior tenía tres problemas que hacían inviable cualquier trabajo de posicionamiento.
-
-**Las seis páginas compartían un solo título y una sola descripción.** Google mostraba el mismo texto para todas. Una persona que buscaba "etiquetas autoadhesivas" y otra que buscaba "prospectos medicinales" veían exactamente el mismo resultado, sin nada que les dijera que esa página respondía a lo suyo.
-
-**El contenido no viajaba en la página.** El sitio se armaba dentro del navegador del visitante. Google es capaz de esperar a que eso ocurra, pero lo hace en una cola aparte que demora. Y hay un grupo entero que directamente no espera.
-
-**Los buscadores con IA no ejecutan ese proceso.** GPTBot (ChatGPT), ClaudeBot, PerplexityBot y los demás piden la página, reciben un documento vacío y se van. Para ellos **Neuhaus no existía**. Lo mismo pasaba con WhatsApp y LinkedIn al compartir un link: sin título útil, sin descripción, sin imagen.
-
-Esto último es lo que hace que la reconstrucción del sitio no haya sido una decisión técnica sino comercial: **era la condición para poder hacer todo lo demás.**
+Es un canal joven, y ahí está la oportunidad: **en este rubro, la competencia todavía no está presente.**
 
 ---
 
-# 2. La base: páginas que se leen solas
+# 1. Punto de partida: qué vende Neuhaus y a quién
 
-Las seis páginas del sitio ahora se generan **completas y de antemano**. Quien las pida —una persona, Google, ChatGPT o WhatsApp— recibe el documento entero, con todo el texto, los títulos y los datos de la empresa adentro.
+Toda la estrategia se apoya en entender bien esto, porque es lo que define contra qué búsquedas conviene competir.
 
-| Quién visita | Antes recibía | Ahora recibe |
-|---|---|---|
-| Google | Página vacía + espera en cola de renderizado | Página completa, indexa directo |
-| Bing | Página vacía | Página completa |
-| **ChatGPT, Claude, Perplexity** | **Nada** | **Página completa** |
-| WhatsApp, LinkedIn, Slack | Vista previa rota | Título y descripción correctos por página |
+**Neuhaus S.A. no es una imprenta comercial.** Es un proveedor industrial que produce **prospectos medicinales y etiquetas autoadhesivas** para las industrias farmacéutica, cosmética, alimenticia y vinícola. Fundada en Boedo en 1976, hoy va por su tercera generación familiar.
 
-Y esto es lo que hay hoy en cada página, medido sobre el sitio real:
+Lo que la distingue de una imprenta genérica se puede enumerar con precisión:
 
-| Página | Palabras de texto |
-|---|---:|
-| Inicio | 361 |
-| Prospectos | 383 |
-| Etiquetas | 276 |
-| Calidad | 354 |
-| Nosotros | 706 |
-| Contacto | 162 |
+- **Cadena de producción integrada.** Todo el proceso ocurre dentro de la planta, sin tercerizar ninguna etapa. Nueve pasos, de los cuales tres son controles de calidad.
+- **Electronic Verification.** Cada pliego impreso se compara en tiempo real contra el PDF aprobado por el cliente. Cualquier diferencia tipográfica, cromática o estructural se detecta y se separa antes de que el trabajo avance en la línea.
+- **Sistema Laetus.** Lector integrado en las dobladoras que verifica la legibilidad del código de barras en cada pliego individual.
+- **Departamento de calidad propio** dentro de la planta. El control no se terceriza.
+- **Certificaciones ISO 9001, BPM y FSC Cadena de Custodia.** BPM es la que habilita a operar como proveedor del sector farmacéutico.
+- **Tres tecnologías de impresión** —offset, flexografía y digital—, lo que permite cubrir desde tirajes largos hasta muestras de bajo volumen.
+- **4,7 ★ con 20 opiniones** en Google.
 
-Cada página tiene un único título principal y una jerarquía ordenada de subtítulos por debajo. Es la estructura que un buscador usa para entender de qué trata cada parte del contenido.
+**Ese perfil es el que manda sobre toda la estrategia.** Un cliente de Neuhaus no busca "una imprenta": busca un proveedor capaz de certificar lo que produce y de responder ante un organismo regulador. Es una decisión de compra técnica, no de precio — y eso cambia por completo qué búsquedas vale la pena ganar.
 
 ---
 
-# 3. Por qué palabras se compite
+# 2. El objetivo
 
-Acá hay una decisión estratégica que conviene explicar, porque va en contra de la intuición.
+**Que Neuhaus aparezca cuando un comprador industrial busca exactamente lo que Neuhaus produce.**
+
+No se trata de "traer tráfico". El sitio de una empresa B2B con este perfil no se mide en visitas, se mide en cuántas de esas visitas eran un laboratorio buscando proveedor. Doscientas visitas de gente que quiere tarjetas personales valen menos que dos de un jefe de compras farmacéutico.
+
+De ese objetivo se desprenden los tres frentes del trabajo:
+
+1. **Que el sitio sea legible** por todos los agentes que deciden quién aparece: Google, Bing, los buscadores con IA y las plataformas donde se comparten links.
+2. **Que compita por las búsquedas correctas**, que son las de nicho y alta intención comercial.
+3. **Que publique hechos verificables**, porque es lo que citan tanto un comprador técnico como un modelo de IA.
+
+---
+
+# 3. La estrategia de palabras clave: nicho, no volumen
+
+Acá hay una decisión que va en contra de la intuición y conviene explicar.
 
 **No se apunta a las búsquedas con más volumen. Se apunta a las que traen clientes.**
 
-"Imprenta Buenos Aires" tiene miles de búsquedas por mes y miles de competidores. Pero la mayoría de esas búsquedas son de alguien que quiere cien tarjetas personales o un folleto suelto: consultas que ocupan tiempo de Neuhaus y no terminan en nada.
+*"Imprenta Buenos Aires"* tiene miles de búsquedas por mes y miles de competidores. Pero la mayoría de esas consultas son de alguien que quiere cien tarjetas personales o un folleto suelto: ocupan tiempo del equipo comercial y no terminan en una orden de compra.
 
-"Impresión de prospectos medicinales con verificación electrónica" tiene poquísimas búsquedas por mes. Pero **cada una es un laboratorio con presupuesto asignado buscando un proveedor**.
+*"Impresión de prospectos medicinales con verificación electrónica"* tiene poquísimas búsquedas por mes. Pero **cada una es un laboratorio con presupuesto asignado buscando un proveedor** — y son muy pocos los que pueden responder a esa búsqueda con certificaciones reales.
 
-La segmentación apunta al segundo caso:
+Competir en el segundo terreno es más barato, más rápido y convierte incomparablemente mejor. La segmentación quedó así:
 
 | Página | Búsqueda principal | Búsquedas secundarias |
 |---|---|---|
-| Inicio | imprenta industrial Buenos Aires | industria gráfica Argentina · imprenta para laboratorios · impresión offset y flexográfica |
-| Prospectos | prospectos medicinales impresión | impresión de prospectos farmacéuticos · prospectos plegados laboratorio |
-| Etiquetas | etiquetas autoadhesivas Buenos Aires | etiquetas en rollo flexográficas · etiquetas BOPP · etiquetas cosmética y alimentos |
-| Calidad | control de calidad impresión farmacéutica | Electronic Verification imprenta · sistema Laetus · BPM impresión · ISO 9001 gráfica |
-| Nosotros | Neuhaus S.A. industria gráfica | imprenta familiar Buenos Aires · imprenta Boedo |
-| Contacto | imprenta Boedo CABA | presupuesto impresión prospectos · cotizar etiquetas autoadhesivas |
+| **Inicio** | imprenta industrial Buenos Aires | industria gráfica Argentina · imprenta para laboratorios · impresión offset y flexográfica |
+| **Prospectos** | prospectos medicinales impresión | impresión de prospectos farmacéuticos · prospectos plegados laboratorio |
+| **Etiquetas** | etiquetas autoadhesivas Buenos Aires | etiquetas en rollo flexográficas · etiquetas BOPP · etiquetas cosmética y alimentos |
+| **Calidad** | control de calidad impresión farmacéutica | Electronic Verification imprenta · sistema Laetus · BPM impresión · ISO 9001 gráfica |
+| **Nosotros** | Neuhaus S.A. industria gráfica | imprenta familiar Buenos Aires · imprenta Boedo |
+| **Contacto** | imprenta Boedo CABA | presupuesto impresión prospectos · cotizar etiquetas autoadhesivas |
 
-Cada término está reflejado en el título de la página, en su encabezado y en el cuerpo del texto, sin repetirlo forzadamente.
+Cada término principal está reflejado en el título de la página, en su encabezado y en el cuerpo del texto, integrado con naturalidad y sin repetición forzada.
+
+**Un detalle de criterio:** la página de Calidad compite por términos técnicos —*Electronic Verification*, *sistema Laetus*, *BPM impresión*— que casi ninguna imprenta argentina usa en su sitio. Quien busca eso sabe exactamente lo que necesita, y hay muy poco con qué competirle. Es la página con mejor relación entre esfuerzo y resultado de todo el sitio.
 
 ---
 
-# 4. Lo que se ve en Google
+# 4. La arquitectura: por qué el sitio se genera de antemano
 
-Cada página declara ahora su propio título y su propia descripción. Estos son los títulos reales que emite el sitio:
+Esta es la decisión técnica que habilita todo lo demás, así que vale explicar el criterio.
+
+Un sitio web puede armarse de dos maneras: **dentro del navegador de quien lo visita**, o **de antemano, en el servidor**. La primera es cómoda para una aplicación con mucha interacción. La segunda es la que corresponde a un sitio cuyo objetivo es ser encontrado.
+
+Se eligió la segunda. **Las seis páginas se generan completas antes de que nadie las pida.** Quien las solicita —una persona, Google o ChatGPT— recibe el documento entero: el texto, los títulos, los datos de la empresa, todo dentro del HTML inicial.
+
+## La migración a Next.js
+
+Para poder trabajar así, el sitio se llevó a **Next.js 16**, el framework de referencia para sitios que necesitan posicionar. Es una migración de fondo: se reescribió el proyecto completo, manteniendo el diseño y sumando la capa que hace posible todo lo que describe este documento.
+
+**Las seis direcciones se conservaron intactas.** `/nosotros` sigue siendo `/nosotros`, `/servicios/etiquetas` sigue siendo `/servicios/etiquetas`. Fue una condición de la migración, y no es un detalle menor: cambiar direcciones implica ceder la autoridad que Google ya le reconoce a cada página y romper cualquier enlace externo existente. Al mantenerlas, **no hizo falta una sola redirección** y la migración es invisible desde afuera.
+
+Qué habilita esta base, en concreto:
+
+| Capacidad | Para qué sirve |
+|---|---|
+| Generación previa de las páginas | Legibilidad para Google, Bing y buscadores con IA — secciones 4 y 7 |
+| Metadata independiente por ruta | Seis resultados distintos en Google, cada uno con su búsqueda objetivo — sección 5 |
+| Datos estructurados desde el servidor | Panel de empresa y resultados enriquecidos — sección 6 |
+| Mapa del sitio e instrucciones generados por código | Imposible que queden desalineados con el dominio — sección 8 |
+| Optimización automática de imágenes | Cada foto se sirve en el formato y el tamaño que corresponde a cada pantalla |
+| Tipografías servidas desde el propio sitio | Carga más rápida y sin desplazamiento del texto al terminar de cargar |
+| Formularios procesados en el servidor | Validación real, imposible de saltear desde el navegador |
+| Imagen de vista previa generada por página | Cada link compartido muestra su propia miniatura de marca — ver abajo |
+
+Las dos últimas filas tienen efecto directo sobre la experiencia y sobre las métricas de velocidad que Google mide como factor de ranking. El material fotográfico de planta, que son archivos de cámara de alta resolución, quedó reducido a **5,8 MB** para el sitio completo — el banner principal de la portada pesa **43 KB**. En celular, que es de donde llega la mayor parte del tráfico, es la diferencia entre una página que aparece de inmediato y una que se hace esperar.
+
+El motivo es concreto:
+
+| Quién visita | ¿Ejecuta JavaScript? | Qué recibe |
+|---|:--:|---|
+| Googlebot | Sí | Página completa, indexa directo, sin pasar por cola de renderizado |
+| Bingbot | Parcial | Página completa |
+| **GPTBot, ClaudeBot, PerplexityBot** | **No** | **Página completa** |
+| WhatsApp, LinkedIn, Slack | No | Título, descripción y datos correctos por página |
+
+**Los rastreadores de los buscadores con IA no ejecutan JavaScript.** Frente a un sitio que se arma en el navegador reciben un documento vacío y se van. Por eso esta decisión no es un detalle técnico sino la condición de entrada al canal GEO completo: **sin ella, ninguna de las medidas de la sección 7 tendría efecto**, porque el agente nunca llegaría a ver el contenido.
+
+Hay un beneficio adicional del lado de Google: indexa sin pasar por la cola de renderizado diferido, que es donde un sitio dinámico pierde tiempo cada vez que cambia su contenido.
+
+**Volumen de texto real servido en el HTML, por página:**
+
+| Página | Palabras |
+|---|---:|
+| Nosotros | 706 |
+| Prospectos | 383 |
+| Inicio | 361 |
+| Calidad | 354 |
+| Etiquetas | 276 |
+| Contacto | 162 |
+
+Cada página tiene un único título principal y una jerarquía ordenada de subtítulos por debajo. El carrusel de la portada monta un solo título principal por vez —las pantallas se intercambian, no se apilan—, de modo que la estructura que recibe el buscador queda limpia.
+
+---
+
+# 5. Cómo se presenta el sitio en Google
+
+Cada página declara su propio título y su propia descripción, escritos con dos criterios: que la búsqueda objetivo aparezca al principio, y que la persona que los lee en el resultado entienda de inmediato si esa página responde a lo que necesita.
 
 | Página | Título en Google |
 |---|---|
@@ -98,151 +153,186 @@ Cada página declara ahora su propio título y su propia descripción. Estos son
 | Nosotros | Nosotros — Industria gráfica familiar en Boedo \| Neuhaus S.A. |
 | Contacto | Contacto — Cotizá tu impresión \| Neuhaus S.A. |
 
-Cada página declara además cuál es su dirección oficial —para que Google no dude entre versiones con y sin `www`, con y sin `https`— y se le autoriza explícitamente a mostrar imágenes grandes y descripciones largas en los resultados.
+Cada página declara además **cuál es su dirección oficial**, para que Google no dude entre variantes con y sin `www` o con y sin `https`, y autoriza explícitamente a mostrar imagen grande y descripción sin recorte en los resultados.
 
-Todas esas direcciones se derivan de un único lugar en el código. Si algún día cambia el dominio, se cambia ahí y se actualiza todo: los enlaces oficiales, las vistas previas al compartir y el mapa del sitio. No hay forma de que queden desincronizados.
+**Un criterio de construcción que conviene señalar:** todas esas direcciones se derivan de **una única constante de dominio** definida en un solo lugar del proyecto. Las direcciones oficiales, las vistas previas al compartir en redes y el mapa del sitio se construyen a partir de ella. Esto tiene dos consecuencias prácticas: elimina de raíz una familia entera de errores por direcciones mal formadas, y reduce el cambio de dominio a editar esa constante — algo especialmente útil mientras la decisión siga abierta.
 
-> **Un ajuste menor pendiente:** cuatro de las seis descripciones son más largas que lo que Google muestra (unos 155 caracteres) y se ven cortadas en el resultado. No es una penalización, pero conviene recortarlas para controlar exactamente qué texto se lee.
+## Cómo se ve el sitio al compartirlo
 
----
+Cuando alguien pasa un link del sitio por WhatsApp, LinkedIn o Slack, la vista previa se arma con el título, la descripción y una **imagen de marca de 1200 × 630 px**.
 
-# 5. Los datos de la empresa, en formato que las máquinas entienden
+Esas imágenes **se generan por código, una por página**, con la identidad visual de Neuhaus: fondo azul de marca, el nombre de la empresa, el título propio de esa página, las tres certificaciones y el dominio. Pasar el link de Calidad muestra *"La calidad no es un resultado. Es un proceso."*; el de Etiquetas muestra *"Etiquetas autoadhesivas en rollo."*
 
-Además del texto que lee una persona, el sitio publica ahora una ficha de datos estructurada que solo leen las máquinas. Es lo que alimenta el panel de empresa que Google muestra a la derecha de los resultados, y lo que permite que aparezcan las migas de navegación y la valoración con estrellas dentro del resultado.
+Se resolvió así en lugar de usar una única imagen fija por dos razones: cada página comparte su propio mensaje en vez de un genérico de marca, y no depende de que se produzca una pieza de diseño por separado — si más adelante Neuhaus quiere reemplazarlas por material propio, se sustituyen sin tocar el resto.
 
-Ahí están declarados, sin ambigüedad: razón social, año de fundación (1976), dirección completa con código postal, coordenadas, teléfono, mail, horarios, zona de servicio, las certificaciones **ISO 9001, BPM y FSC**, las **4,7 estrellas con 20 reseñas** del perfil de Google, y "NEUHAUS 3G" como nombre alternativo de la marca.
+## Un solo lugar para los datos
 
-Las páginas de Prospectos y Etiquetas declaran además cada línea de producción como un servicio, con su tipo, su zona de cobertura y su público (empresas, no consumidor final).
-
-Todo esto cumple una tercera función además de las dos obvias, y es la que conecta con la sección siguiente: **le da a los buscadores con IA los hechos de la empresa en un formato que pueden citar sin tener que deducirlos de un texto de marketing.**
+El mismo criterio de fuente única se aplicó a los datos de la empresa: dirección, teléfono, email, año de fundación y certificaciones viven en **un solo archivo** del que se alimentan el pie de página, la página de Contacto, el mapa, los datos estructurados y el resumen para buscadores con IA. Se edita en un lugar y cambia en todos, sin riesgo de que una página quede diciendo algo distinto de otra.
 
 ---
 
-# 6. Cómo encuentra Google todas las páginas
+# 6. Los datos de la empresa en formato legible por máquinas
 
-**El mapa del sitio** (`sitemap.xml`) se genera solo desde el código, con las seis direcciones, su fecha de última modificación y una prioridad diferenciada: las dos páginas de servicio están declaradas por encima de las institucionales, porque son las que tienen intención comercial.
+Además del texto que lee una persona, el sitio publica una **ficha estructurada de datos** que solo leen las máquinas, emitida desde el servidor dentro del HTML inicial.
 
-**El archivo de instrucciones para buscadores** (`robots.txt`) también se genera solo, y apunta al mapa del sitio.
+Cumple tres funciones distintas:
 
-Los dos derivan del mismo dominio único que el resto de la metadata, así que no pueden quedar desalineados.
+1. **Alimenta el panel de empresa** que Google muestra al costado de los resultados.
+2. **Habilita resultados enriquecidos**: las migas de navegación y la valoración con estrellas dentro del propio resultado de búsqueda.
+3. **Le entrega a los buscadores con IA los hechos de la empresa ya masticados**, en lugar de obligarlos a deducirlos de un texto de marketing. Esto conecta directo con la sección siguiente.
 
-## El dominio: una decisión importante
+La ficha declara sin ambigüedad: razón social, nombre alternativo ("NEUHAUS 3G"), año de fundación, dirección completa con código postal, coordenadas, teléfono, email, horarios, zona de servicio, áreas de conocimiento, las tres certificaciones y la valoración de Google.
 
-**`imprentaneuhaus.com` es el dominio oficial.** Es el que figura en el perfil de Google Business de Neuhaus, así que es donde ya está acumulada toda la señal de marca que existe hoy.
+Las páginas de Prospectos y Etiquetas declaran además cada línea de producción como un **servicio**, con su tipo, su cobertura geográfica y su público — definido explícitamente como empresas, no consumidor final. Es una señal directa de que Neuhaus opera B2B.
 
-**`neuhaus.com.ar` tiene que redirigir hacia él, con una redirección permanente y conservando la ruta** (`neuhaus.com.ar/calidad` tiene que ir a `imprentaneuhaus.com/calidad`, no a la portada).
-
-La diferencia no es un detalle. Una redirección permanente **traspasa** al dominio oficial toda la autoridad acumulada por el viejo. En cambio, dos dominios sirviendo el mismo contenido en paralelo **parten esa autoridad al medio** y dejan que Google elija por su cuenta cuál mostrar. Es de las pocas cosas que pueden anular buena parte del trabajo si se configura mal.
-
-Esto se resuelve al definir el hosting; es configuración de dominio, no de código. Los mails `@neuhaus.com.ar` siguen funcionando igual: el dominio del correo y el del sitio son independientes.
+Todo está organizado en un grafo único con identificadores estables, de manera que los servicios, la página de contacto y las migas de navegación **referencian** el nodo de la organización en lugar de duplicarlo. Un solo lugar donde la empresa está definida.
 
 ---
 
-# 7. GEO: aparecer en ChatGPT, Perplexity y Gemini
+# 7. GEO: presencia en ChatGPT, Perplexity y Gemini
 
-## Lo primero es poder ser leído
+## La base
 
-Ya está resuelto, y es la condición de todo lo demás: los buscadores con IA no ejecutan el proceso que armaba el sitio anterior. Sin páginas completas de entrada, ninguna otra táctica de esta sección tendría efecto, porque el agente nunca llegaría a ver contenido.
+Ya está resuelta por la arquitectura de la sección 4, y conviene subrayarlo: es la condición habilitante de todo este bloque.
 
-## Permiso explícito para los bots de IA
+## Acceso declarado para rastreadores de IA
 
-El sitio autoriza por nombre a los rastreadores de OpenAI, Anthropic, Perplexity, Google, Apple, Amazon y Meta.
+El sitio autoriza **por nombre** a los rastreadores de OpenAI, Anthropic, Perplexity, Google, Apple, Amazon y Meta. No quedan sujetos a interpretación: están habilitados de forma explícita.
 
-> ⚠️ **Esto es una decisión de negocio, no técnica, y conviene que Neuhaus la tome a conciencia.**
+> **Es una decisión de negocio, y corresponde que Neuhaus la tome a conciencia.**
 >
-> Permitirlos significa que el contenido del sitio puede usarse tanto para **citar a Neuhaus en una respuesta** como para **entrenar** esos modelos. Para una empresa B2B cuyo objetivo es que la encuentren compradores industriales, el beneficio de aparecer supera claramente al costo: el contenido del sitio es material comercial público, no información sensible.
+> Permitirlos significa que el contenido del sitio puede usarse tanto para **citar a Neuhaus en una respuesta** como para **entrenar** esos modelos.
 >
-> Está habilitado por defecto porque es lo que conviene, pero es reversible en cualquier momento y en un minuto.
+> El criterio con que se dejó habilitado: para una empresa B2B cuyo objetivo es que la encuentren compradores industriales, el beneficio de aparecer supera claramente al costo. El contenido del sitio es material comercial público, pensado para ser leído. No hay información sensible en juego.
+>
+> Es reversible en cualquier momento y en un minuto.
 
 ## Un resumen escrito para las máquinas
 
-El sitio publica un archivo (`/llms.txt`) con un resumen ordenado de qué es Neuhaus, qué produce, con qué tecnologías, cómo controla la calidad, a qué sectores provee y un índice de páginas. Es una convención nueva, todavía no adoptada por todos los proveedores, que se incluyó porque no cuesta nada y cada vez se lee más.
+El sitio publica un archivo en `/llms.txt` con un resumen ordenado de qué es Neuhaus, qué produce, con qué tecnologías, cómo controla la calidad, a qué sectores provee, sus datos de contacto y un índice de páginas.
 
-## Escribir cosas que se puedan citar
+Es una convención emergente, todavía no adoptada por todos los proveedores. Se incluyó porque el costo es nulo y la adopción viene creciendo.
 
-Los modelos de IA citan **datos concretos y verificables**, no afirmaciones de marketing. La diferencia práctica:
+## El criterio de redacción: hechos, no adjetivos
 
-| Lo que no se cita | Lo que sí se cita |
+Los modelos de IA citan **fragmentos autocontenidos, específicos y verificables**. No citan afirmaciones de marketing, porque no hay fuente que pueda confirmarlas. La diferencia práctica:
+
+| No se cita | Sí se cita |
 |---|---|
-| "Somos líderes en calidad" | "Cada pliego se compara contra el PDF aprobado mediante verificación electrónica antes de avanzar en la línea" |
+| "Somos líderes en calidad" | "Cada pliego se compara contra el PDF aprobado mediante Electronic Verification antes de avanzar en la línea" |
 | "Muchos años de experiencia" | "Fundada en 1976 en Boedo, CABA; tercera generación familiar" |
-| "Las mejores certificaciones" | "Certificaciones ISO 9001, BPM y FSC" |
+| "Las mejores certificaciones" | "Certificaciones ISO 9001, BPM y FSC Cadena de Custodia" |
+| "Trabajamos con tecnología de punta" | "Lector Laetus integrado en las dobladoras que verifica la legibilidad del código de barras en cada pliego" |
 
-Los textos del sitio siguen ese criterio, y la ficha de datos de la sección 5 publica esos hechos ya masticados.
+Los textos del sitio siguen ese criterio. La columna de la derecha no es un ejemplo teórico: son frases publicadas hoy.
 
-## El HTML también dice qué es cada cosa
+Neuhaus tiene una ventaja natural en este punto, y vale aprovecharla: **casi todo lo que la diferencia es un hecho concreto.** Un año, tres certificaciones, dos sistemas de verificación con nombre propio, nueve pasos de proceso. No hay que inventar nada citable — hay que exponerlo bien.
 
-La cadena de producción y los hitos históricos están marcados como listas ordenadas de verdad. Las fichas técnicas de cada tecnología de impresión, como fichas de definición. Los listados de productos y certificaciones, como listas. Suena a detalle, pero es lo que permite que un extractor automático entienda "esto es una secuencia de nueve pasos de proceso" en lugar de recibir nueve cajas sin relación entre sí.
+## Marcado semántico
 
-## Lo que queda por hacer acá
+El HTML usa etiquetas con significado real, que es lo que permite a un extractor automático identificar qué representa cada bloque:
 
-**Preguntas frecuentes.** El formato pregunta-respuesta es, con diferencia, el más citado por los buscadores con IA: cada respuesta es un fragmento autocontenido, listo para copiar en una respuesta. La parte técnica está lista; **falta redactar y aprobar 5 a 7 preguntas** para Inicio, Prospectos, Etiquetas y Calidad. Es el ítem de mayor impacto que queda pendiente en todo el informe.
+- La cadena de producción y los hitos históricos son **listas ordenadas** de verdad
+- Las especificaciones de cada tecnología de impresión son **fichas de definición**
+- Los listados de productos y certificaciones son **listas**
+- El contenido principal está delimitado como tal, con atajo de navegación
 
-Ideas del tipo: *¿Qué tirajes mínimos manejan? ¿Qué normativa cumplen los prospectos para ANMAT? ¿Cuánto demora una entrega? ¿Qué sustratos usan para etiquetas de cosmética? ¿Qué es la verificación electrónica y qué garantiza?*
-
-**Fichas técnicas por servicio.** Sustratos, gramajes, tamaños, tirajes mínimos y máximos, tiempos de entrega. Es exactamente lo que busca un jefe de compras antes de pedir una cotización, y hoy no está en el sitio. Doble beneficio: filtra consultas que no encajan y le da a la IA datos duros para citar.
+Así, un extractor entiende "esto es una secuencia de nueve pasos de proceso" en lugar de recibir nueve cajas genéricas sin relación entre sí.
 
 ## Cómo se mide
 
-No existe una consola de métricas para IA como la hay para Google. Se mide de tres formas: consultando manualmente cada mes en ChatGPT, Perplexity y Gemini con un set fijo de preguntas del sector; mirando en las analíticas cuántas visitas llegan derivadas desde esos sitios; y revisando en los registros del servidor la actividad de esos rastreadores.
+No existe una consola de métricas para IA equivalente a Search Console. Se mide de tres maneras:
+
+- **Consultas manuales mensuales** en ChatGPT, Perplexity y Gemini con un set fijo de 10 preguntas del sector, para ver si Neuhaus aparece y en qué términos
+- **Visitas derivadas** desde esos sitios en las analíticas
+- **Actividad de los rastreadores de IA** en los registros del servidor
 
 ---
 
-# 8. Búsqueda local
+# 8. Indexación y dominio
 
-Neuhaus le vende a laboratorios del AMBA. La búsqueda local es un canal directo y hoy está desatendido.
+**Mapa del sitio.** Se genera desde el código, no como archivo fijo: incluye las seis direcciones con su fecha de última modificación y una **prioridad diferenciada según relevancia comercial** — las dos páginas de servicio por encima de las institucionales, porque son las que tienen intención de compra.
 
-**Los datos oficiales, definitivos:**
+**Instrucciones para buscadores.** También generadas desde el código, apuntando al mapa del sitio y con las reglas por rastreador de la sección anterior.
+
+Ambos derivan de la misma constante de dominio que el resto de la metadata, de modo que no pueden quedar desalineados.
+
+## La definición del dominio
+
+Neuhaus tiene dos dominios —`neuhaus.com.ar` e `imprentaneuhaus.com`— y hay que elegir **uno solo como oficial**. El otro se conecta mediante **redirección permanente, conservando la ruta**: de manera que `/calidad` lleve a `/calidad` y no a la portada.
+
+La distinción importa más de lo que parece. Una redirección permanente **traspasa** al dominio oficial toda la autoridad acumulada por el otro. Dos dominios sirviendo el mismo contenido en paralelo **parten esa autoridad al medio** y delegan en el buscador la elección de cuál mostrar. Es de las pocas configuraciones capaces de neutralizar buena parte del trabajo si se resuelve mal.
+
+## La recomendación: `neuhaus.com.ar`
+
+Se apoya en dos argumentos.
+
+**1 · Coherencia de marca y tráfico directo.** Las casillas de correo de la empresa son `@neuhaus.com.ar`. Todo el que recibe un mail de Neuhaus, o tiene una factura, un remito o una tarjeta a mano, va a tipear `neuhaus.com.ar` en el navegador. Que ese sea el dominio oficial —y no un paso intermedio hacia otro— alinea el sitio con la identidad que la empresa ya usa en toda su comunicación.
+
+**2 · Señal geográfica.** `.com.ar` es un dominio de país, y Google lo interpreta como una señal de que la empresa opera en Argentina. Para un proveedor que le vende a laboratorios del AMBA y compite por búsquedas como *"imprenta industrial Buenos Aires"* o *"etiquetas autoadhesivas Buenos Aires"*, ese refuerzo local juega a favor. Un `.com` es neutro en ese sentido.
+
+**Lo que hay que hacer al definirlo:** el perfil de Google Business apunta hoy a `imprentaneuhaus.com`, y es la fuente más fuerte que existe asociando a Neuhaus con una dirección web. **Hay que actualizar ese campo al dominio elegido.** Es una edición de dos minutos, pero es la que hace que la señal de marca acumulada acompañe la decisión en lugar de quedar apuntando a un dominio que redirige.
+
+`imprentaneuhaus.com` queda entonces como el que redirige, conservando la ruta.
+
+Se implementa al definir el hosting; es configuración de dominio, más el cambio de la constante en el proyecto. Los mails `@neuhaus.com.ar` no se ven afectados en ningún escenario: el dominio de correo y el del sitio son independientes entre sí, y ninguna de las dos opciones los toca.
+
+---
+
+# 9. Búsqueda local
+
+Neuhaus le vende a laboratorios del AMBA. La búsqueda local es un canal directo y de alta intención.
+
+**Los datos oficiales de la empresa:**
 
 > **Neuhaus S.A. — Industria Gráfica**
 > Colombres 1065, Boedo, C1238AAA, Ciudad Autónoma de Buenos Aires, Argentina
 > +54 11 4925-6364
-> imprentaneuhaus.com
 
-Ese bloque es la fuente de verdad. Tiene que aparecer **idéntico, carácter por carácter**, en el sitio, en Google Business, en LinkedIn, en Facebook, en Instagram y en cualquier directorio. Google cruza esos datos entre fuentes para confirmar que la empresa existe y está donde dice: cada variación resta confianza.
+Ese bloque es la fuente de verdad del proyecto. Tiene que figurar **idéntico, carácter por carácter**, en el sitio, en Google Business, en LinkedIn, en Facebook, en Instagram y en cualquier directorio sectorial.
 
-**Lo que se corrigió en el sitio:**
-- El teléfono tenía un dígito mal (4925-63**63**). Corregido en el texto visible y en el link que marca desde el celular.
-- Se agregó el código postal completo, que faltaba.
-- El mapa apuntaba a "Colomb**e**s 1065", con la calle mal escrita.
-- Se cargaron las 4,7 estrellas y las 20 reseñas en la ficha de datos de la empresa.
+El motivo: Google cruza esos datos entre fuentes para confirmar que la empresa existe, está donde dice y es quien dice ser. Cada variación —una abreviatura distinta, un teléfono sin código de área, un código postal incompleto— resta confianza a esa verificación. Por eso los datos viven en un solo archivo dentro del proyecto y de ahí se propagan a todo el sitio.
 
-**Lo que depende de la gestión de Neuhaus:**
-
-1. **Completar el perfil de Google Business**: categoría correcta ("Imprenta" / "Servicio de impresión comercial"), horarios, descripción con las palabras clave del punto 3, productos y servicios cargados, y fotos de planta (hay 48 disponibles del material que ya se procesó).
-2. **Pedir reseñas a clientes recurrentes.** Es el factor número uno del ranking en el paquete local de Google, y además cada reseña es texto de un tercero que la IA puede citar. Hay 20; llegar a 50 cambia el panorama.
-3. **Las reseñas ya se muestran en el sitio.** El sitio anterior no las mostraba en ningún lado; ahora las 4,7 estrellas con 20 opiniones aparecen en el pie de página —o sea, en las seis páginas— y en la página de Contacto, enlazadas al perfil de Google. Falta solamente sumarlas al cuerpo de la portada, que es donde más peso tienen.
-4. **Crear la entidad de la empresa en Wikidata.** Es la base de datos pública de la que se alimentan tanto el panel de conocimiento de Google como los modelos de IA. Tiene una influencia desproporcionada respecto de lo que cuesta hacerlo.
-5. **Directorios sectoriales**: Cámara Argentina de la Industria Gráfica, guías de proveedores farmacéuticos. Los buscadores con IA ponderan mucho las fuentes de terceros — a veces más que el sitio propio.
+En el sitio ya está resuelto: dirección completa con código postal, teléfono en formato internacional con enlace directo para llamar desde el celular, mapa apuntando a la ubicación exacta, y la valoración de **4,7 ★ con 20 opiniones** visible en el pie de las seis páginas y en la página de Contacto, enlazada al perfil de Google.
 
 ---
 
-# 9. Resumen del estado
+# 10. Hoja de ruta
 
-| | Estado |
-|---|---|
-| Páginas legibles por Google, Bing y buscadores con IA | ✅ Hecho |
-| Título y descripción propios en las 6 páginas | ✅ Hecho |
-| Direcciones oficiales, vistas previas al compartir | ✅ Hecho |
-| Ficha de datos estructurada de la empresa | ✅ Hecho |
-| Mapa del sitio e instrucciones para buscadores | ✅ Hecho |
-| Resumen para buscadores con IA (`llms.txt`) | ✅ Hecho |
-| Permiso a los bots de IA | ✅ Hecho — **falta la aprobación formal de Neuhaus** |
-| Datos de contacto corregidos y unificados | ✅ Hecho |
-| Velocidad de carga | ✅ Hecho — imágenes de 70 MB a 5,8 MB |
-| Redirección de `neuhaus.com.ar` | ⛔ Al definir el hosting |
-| Alta en Google Search Console y envío del mapa | ⛔ Al publicar |
-| Imagen de vista previa al compartir | ⛔ Falta la pieza de diseño |
-| Preguntas frecuentes | ⛔ **Falta redactar y aprobar** — mayor impacto pendiente |
-| Fichas técnicas por servicio | ⛔ Faltan los datos de Neuhaus |
-| Perfil de Google Business, reseñas, Wikidata, directorios | ⛔ Gestión de Neuhaus |
+El sitio queda con la base construida. Estas son las líneas de trabajo que multiplican el resultado, ordenadas por impacto.
+
+## Alto impacto
+
+**1 · Preguntas frecuentes.** El formato pregunta-respuesta es, con diferencia, el más citado por los buscadores con IA: cada respuesta es un fragmento autocontenido, listo para incorporarse a una respuesta generada. La estructura técnica del sitio ya está preparada para publicarlas; falta definir las preguntas.
+
+Cinco a siete por página, en Inicio, Prospectos, Etiquetas y Calidad. Del tipo: *¿Qué tirajes mínimos manejan? ¿Qué normativa cumplen los prospectos para ANMAT? ¿Cuánto demora una entrega estándar? ¿Qué sustratos usan para etiquetas de cosmética? ¿Qué garantiza la verificación electrónica?*
+
+**2 · Fichas técnicas por servicio.** Sustratos, gramajes, tamaños, tirajes mínimos y máximos, tiempos de entrega. Es lo primero que busca un jefe de compras antes de pedir una cotización. Doble beneficio: filtra las consultas que no encajan con la planta y le da a la IA datos duros para citar.
+
+**3 · Reseñas en Google.** Es el factor de mayor peso en el ranking del paquete local, y además cada reseña es texto de un tercero que los modelos de IA pueden citar. Hay 20; llegar a 50 cambia el panorama. Pedirlas sistemáticamente a clientes recurrentes es de las acciones con mejor relación resultado/esfuerzo del proyecto entero.
+
+## Impacto sostenido
+
+**4 · Perfil de Google Business completo.** Categoría correcta, horarios, descripción con los términos de la sección 3, productos y servicios cargados, y fotos de planta. Alimenta tanto la búsqueda local como a Gemini.
+
+**5 · Entidad en Wikidata.** Es la base de datos pública de la que se alimentan el grafo de conocimiento de Google y los modelos de IA. Tiene una influencia desproporcionada respecto de lo que cuesta crearla.
+
+**6 · Directorios sectoriales.** Cámara Argentina de la Industria Gráfica, guías de proveedores farmacéuticos. Los buscadores con IA ponderan mucho las fuentes de terceros — en ocasiones más que el sitio propio.
+
+## Ajustes finos
+
+**7 · Longitud de las descripciones.** Cuatro de las seis superan lo que Google alcanza a mostrar (unos 155 caracteres). Recortarlas permite controlar exactamente qué texto se lee en el resultado.
+
+**8 · Al publicar:** dar de alta el sitio en Google Search Console —los dos dominios: el oficial para medir, el otro para confirmar que las redirecciones se procesan— y enviar el mapa del sitio.
 
 ---
 
-## Una aclaración honesta sobre plazos
+# 11. Expectativas de plazo
 
-El posicionamiento no es inmediato. Google tarda entre **cuatro y ocho semanas** en reindexar bien un sitio rehecho y empezar a mostrar los cambios en los resultados. Los buscadores con IA actualizan su información en ciclos propios que no son públicos.
+Conviene decirlo con todas las letras: **el posicionamiento no es inmediato.**
 
-Lo que sí es inmediato desde el día uno: **el sitio carga rápido, los formularios llegan, los datos de contacto son correctos y los links compartidos se ven bien**. Eso ya convierte visitas que hoy se pierden.
+Google tarda entre **cuatro y ocho semanas** en indexar a fondo un sitio y empezar a reflejarlo en los resultados. Los buscadores con IA actualizan su información en ciclos propios que no son públicos, y suelen ir por detrás.
 
-Y hay algo que conviene decir con todas las letras: por más trabajo técnico que se haga, **los tres factores de mayor peso para una empresa como Neuhaus dependen de la gestión, no del código**: las reseñas en Google, el perfil de Business completo y las fichas técnicas reales de lo que produce la planta. La base ya está construida para sostenerlos.
+Lo que sí rinde desde el primer día: **el sitio carga rápido, las consultas de los formularios llegan, los datos de contacto son correctos y verificables, y los links compartidos se ven como corresponde.** Eso convierte visitas desde el momento en que se publica, independientemente del ranking.
+
+Y una observación honesta para cerrar: por sólida que sea la base técnica, **los tres factores de mayor peso para una empresa de este perfil dependen de la gestión comercial, no del código** — las reseñas en Google, el perfil de Business completo y las fichas técnicas reales de lo que produce la planta. El sitio está construido para sostener esos tres frentes y sacarles el máximo provecho; activarlos es la decisión que define hasta dónde llega el resultado.
