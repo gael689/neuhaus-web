@@ -60,14 +60,21 @@ const Header = () => {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b ${
-          scrolled
-            ? "bg-background/95 backdrop-blur-md shadow-sm border-border"
-            : "bg-transparent border-transparent"
-        }`}
-      >
-        <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4 md:px-8">
+      <header className="fixed top-0 left-0 right-0 z-50">
+        {/*
+          El fondo con blur queda siempre montado; solo se anima su opacidad.
+          Agregar/sacar backdrop-blur-md como clase (en vez de su opacidad)
+          hace que el filtro se recalcule de golpe en cada frame de scroll —
+          se ve brusco, sobre todo en Safari/iOS. La opacidad sí es barata
+          y siempre suave.
+        */}
+        <div
+          aria-hidden="true"
+          className={`absolute inset-0 border-b bg-background/95 backdrop-blur-md shadow-sm border-border transition-opacity duration-500 ease-in-out ${
+            scrolled ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <div className="relative container mx-auto flex items-center justify-between h-16 md:h-20 px-4 md:px-8">
           <Link href="/" className="flex items-center z-10" aria-label="Neuhaus S.A. — Inicio">
             <Image
               src={logo}
