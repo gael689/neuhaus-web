@@ -11,7 +11,7 @@
 - Dirección: Colombres 1065, Boedo, C1238AAA, Ciudad Autónoma de Buenos Aires, Argentina
 - Teléfono: +54 11 4925-6364
 - Email: info@neuhaus.com.ar
-- Sitio web: https://imprentaneuhaus.com
+- Sitio web: https://www.neuhaus.com.ar
 - Reseñas en Google: 4,7 sobre 5 (20 opiniones)
 - Certificaciones: ISO 9001, BPM (Buenas Prácticas de Manufactura), FSC Cadena de Custodia
 
@@ -51,9 +51,9 @@ bebidas, bodegas, y pymes o emprendedores que necesitan tirajes cortos.
 
 ## Páginas
 
-- [Inicio](https://imprentaneuhaus.com): resumen de servicios, sectores y certificaciones.
-- [Prospectos & Impresos](https://imprentaneuhaus.com/servicios/prospectos): productos, formatos de entrega y tecnologías de impresión.
-- [Etiquetas Autoadhesivas](https://imprentaneuhaus.com/servicios/etiquetas): sustratos, industrias y escalas de producción.
-- [Calidad](https://imprentaneuhaus.com/calidad): sistemas de control, certificaciones y cadena de producción.
-- [Nosotros](https://imprentaneuhaus.com/nosotros): historia, planta, misión y valores.
-- [Contacto](https://imprentaneuhaus.com/contacto): formulario de cotización y datos de contacto.
+- [Inicio](https://www.neuhaus.com.ar): resumen de servicios, sectores y certificaciones.
+- [Prospectos & Impresos](https://www.neuhaus.com.ar/servicios/prospectos): productos, formatos de entrega y tecnologías de impresión.
+- [Etiquetas Autoadhesivas](https://www.neuhaus.com.ar/servicios/etiquetas): sustratos, industrias y escalas de producción.
+- [Calidad](https://www.neuhaus.com.ar/calidad): sistemas de control, certificaciones y cadena de producción.
+- [Nosotros](https://www.neuhaus.com.ar/nosotros): historia, planta, misión y valores.
+- [Contacto](https://www.neuhaus.com.ar/contacto): formulario de cotización y datos de contacto.

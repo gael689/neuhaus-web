@@ -47,7 +47,7 @@ Copiar `.env.example` a `.env.local` y completar:
 ```
 RESEND_API_KEY=        # crear cuenta en https://resend.com y generar una API key
 CONTACTO_EMAIL_TO=     # opcional — si se deja vacío, usa SITE.contact.email (info@neuhaus.com.ar)
-CONTACTO_EMAIL_FROM=   # obligatorio — remitente en un dominio verificado en Resend (p. ej. web@imprentaneuhaus.com)
+CONTACTO_EMAIL_FROM=   # obligatorio — remitente en un dominio verificado en Resend (p. ej. web@neuhaus.com.ar)
 ```
 
 Sin `RESEND_API_KEY` y `CONTACTO_EMAIL_FROM` el formulario **no finge éxito**: muestra
@@ -56,9 +56,9 @@ falso que mostraba el sitio Vite anterior sin enviar nada.
 
 ## Decisiones de negocio pendientes (no bloquean el código, sí el deploy final)
 
-- **Hosting:** confirmar Vercel (recomendado) vs. mantener el Apache actual con export estático.
-- **Dominio:** `imprentaneuhaus.com` ya es el canónico definido — falta configurar el
-  301 permanente de `neuhaus.com.ar` a nivel DNS/registrar cuando se decida el hosting.
+- **Hosting:** Vercel confirmado, dominio en proceso de conexión (2026-08-13).
+- **Dominio:** decidido — `www.neuhaus.com.ar` es el canónico (reemplaza a `imprentaneuhaus.com`,
+  dado de baja). El apex `neuhaus.com.ar` redirige 308 a `www` a nivel Vercel, no a nivel DNS.
 - **Bots de IA:** `robots.ts` ya los permite por defecto (GPTBot, ClaudeBot, PerplexityBot,
   etc. — ver comentario en el archivo). Es una decisión de negocio que el cliente debería
   confirmar conscientemente antes de publicar; revertirla es mover esos user-agents a un
@@ -70,7 +70,7 @@ El detalle completo, fila por fila, está en `../PLAN-MIGRACION-SEO.md`.
 
 ## Datos confirmados con el cliente (2026-07-28)
 
-- Dominio canónico: **imprentaneuhaus.com** — `neuhaus.com.ar` va por 301
+- Dominio canónico: **www.neuhaus.com.ar** (actualizado 2026-08-13; `imprentaneuhaus.com` queda dado de baja) — el apex `neuhaus.com.ar` redirige 308 a `www`
 - Teléfono: **+54 11 4925-6364** (el `4925-6363` del sitio viejo era un typo)
 - Dirección: Colombres 1065, Boedo, C1238AAA, CABA
 
@@ -93,7 +93,7 @@ scripts/
 
 1. Crear cuenta en Resend, generar API key y verificar el dominio de envío; completar `.env.local` y probar los 3 formularios
 2. Confirmar hosting (Vercel recomendado) y hacer `vercel link` + deploy
-3. Configurar el 301 de `neuhaus.com.ar` → `imprentaneuhaus.com` (conservando la ruta)
+3. ~~Configurar redirect de dominio~~ — hecho: Vercel redirige 308 el apex `neuhaus.com.ar` a `www.neuhaus.com.ar` automáticamente
 4. Verificar ambos dominios en Google Search Console y enviar el sitemap
 5. Confirmar las coordenadas exactas en `lib/site.ts` (hoy son aproximadas)
 6. Sign-off consciente del cliente sobre permitir bots de IA (ya está habilitado por defecto en `robots.ts`)
