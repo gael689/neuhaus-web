@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
+import AvisoDominioViejo from "@/components/AvisoDominioViejo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
@@ -85,6 +87,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="contenido">{children}</main>
         <Footer />
         <Toaster position="top-center" richColors />
+
+        {/* Solo se muestra si la URL trae la marca del redirect del dominio viejo. */}
+        <AvisoDominioViejo />
+        <Analytics />
       </body>
     </html>
   );
