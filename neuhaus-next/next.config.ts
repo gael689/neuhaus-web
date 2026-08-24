@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 const nextConfig: NextConfig = {
-  // El proyecto Vite original vive un nivel más arriba y tiene su propio
-  // lockfile; sin esto Turbopack infiere mal la raíz del workspace.
+  // La app vive en un subdirectorio del repo (Vercel la buildea con el Root
+  // Directory apuntado acá); sin esto Turbopack infiere mal la raíz del workspace.
   turbopack: { root: path.resolve(__dirname) },
 
   images: {

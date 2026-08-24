@@ -1,13 +1,16 @@
 /**
  * Optimizador de imágenes — Neuhaus S.A.
  *
- * Lee los originales del sitio Vite (../src/assets), los redimensiona,
- * los convierte a WebP y los escribe en ./src/assets con nombres
- * descriptivos para SEO de imágenes.
+ * Lee las imágenes originales full-res, las redimensiona, las convierte a WebP
+ * y las escribe en ./src/assets con nombres descriptivos para SEO de imágenes.
  *
- *   node scripts/optimize-images.mjs
+ *   ORIGINALES=/ruta/a/originales node scripts/optimize-images.mjs
  *   node scripts/optimize-images.mjs --dry     (no escribe, solo reporta)
  *   node scripts/optimize-images.mjs --force   (reprocesa aunque ya exista)
+ *
+ * Los originales vivían en el proyecto Vite de la raíz del repo, que se quitó al
+ * quedar la migración en producción. Ya no están acá: hay que recuperarlos de la
+ * historia de git y pasar la ruta en ORIGINALES.
  *
  * Los originales NUNCA se modifican ni se borran.
  */
@@ -18,7 +21,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const SRC = path.resolve(__dirname, "../../src/assets");
+/**
+ * Carpeta de originales. Por defecto la ubicación histórica (proyecto Vite un
+ * nivel más arriba); se sobreescribe con ORIGINALES ahora que ya no está en el repo.
+ */
+const SRC = process.env.ORIGINALES
+  ? path.resolve(process.env.ORIGINALES)
+  : path.resolve(__dirname, "../../src/assets");
 const OUT = path.resolve(__dirname, "../src/assets");
 
 const DRY = process.argv.includes("--dry");
@@ -99,6 +108,23 @@ async function ensureDir(file) {
 }
 
 async function main() {
+  // Sin originales no hay nada que hacer, y el error de walk() no dice por qué.
+  try {
+    await fs.access(SRC);
+  } catch {
+    console.error(
+      `No encuentro los originales en:
+  ${SRC}
+
+Se quitaron del repo junto con el proyecto Vite. Recuperalos de la historia
+de git y volvé a correr con:
+
+  ORIGINALES=/ruta/a/los/originales npm run optimize:images`
+    );
+    process.exitCode = 1;
+    return;
+  }
+
   const all = await walk(SRC);
   const stats = { before: 0, after: 0, converted: 0, copied: 0, skipped: 0, unused: 0 };
   const report = [];
