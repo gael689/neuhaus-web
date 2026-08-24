@@ -39,9 +39,7 @@ El stack, la estructura del código y las convenciones están en
 El repo está conectado a Vercel por la integración de GitHub. **No hay pipeline
 propio, ni GitHub Actions, ni paso manual.**
 
-**Un push a `main` sale a producción**, automático e inmediato. El proyecto no
-genera deploys de preview: lo que entra a `main` es lo que ven los visitantes, sin
-escala intermedia.
+**Un push a `main` sale a producción**, automático e inmediato.
 
 Esto vale para **cualquiera con permiso de push al repo**, tenga o no cuenta en el
 Vercel donde vive el proyecto. Acceso al repo = poder deployar a producción.
