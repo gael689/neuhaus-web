@@ -39,18 +39,21 @@ El stack, la estructura del código y las convenciones están en
 El repo está conectado a Vercel por la integración de GitHub. **No hay pipeline
 propio, ni GitHub Actions, ni paso manual.**
 
-| Acción en git | Qué pasa en Vercel |
-|---|---|
-| Push a `main` | **Deploy a producción**, automático e inmediato |
-| Push a cualquier otra rama | Deploy de *preview*, con URL propia |
-| Pull request | Deploy de *preview*, el link queda en el PR |
+**Un push a `main` sale a producción**, automático e inmediato. El proyecto no
+genera deploys de preview: lo que entra a `main` es lo que ven los visitantes, sin
+escala intermedia.
 
 Esto vale para **cualquiera con permiso de push al repo**, tenga o no cuenta en el
 Vercel donde vive el proyecto. Acceso al repo = poder deployar a producción.
 
-**Por eso, el flujo recomendado es rama + pull request:** se trabaja en una rama, se
-revisa el sitio en la URL de preview que genera Vercel, y recién ahí se mergea a
-`main`. Pushear directo a `main` publica sin escala intermedia.
+**Por eso conviene verificar antes de pushear**, que es la única instancia previa
+que hay:
+
+```bash
+cd neuhaus-next
+npm run dev     # revisar el cambio en localhost:3000
+npm run build   # que compile limpio; si falla acá, falla en Vercel
+```
 
 ### Si un deploy falla
 
