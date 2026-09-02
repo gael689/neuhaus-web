@@ -40,6 +40,20 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      /**
+       * Atajo al portal interno de empleados: neuhaus.com.ar/login → portal.
+       *
+       * `permanent: false` es deliberado. Un redirect permanente (308) lo cachea
+       * el navegador de cada empleado: si mañana cambia la dirección del portal,
+       * cada máquina sigue yendo sola a la vieja hasta que alguien le limpie el
+       * caché a mano. Con el temporal (307) el navegador vuelve a consultar
+       * siempre. Se evalúa pasarlo a permanente cuando la dirección esté firme.
+       *
+       * No interfiere con la regla de arriba: esa solo se dispara cuando el host
+       * es imprentaneuhaus.com, por su condición `has`.
+       */
+      { source: "/login", destination: "https://portal.neuhaus.com.ar", permanent: false },
+
       // Las rutas del sitio Vite se mantienen idénticas, así que no hacen
       // falta redirects de contenido. Estos son solo por prolijidad de URLs.
       { source: "/servicios", destination: "/servicios/prospectos", permanent: true },

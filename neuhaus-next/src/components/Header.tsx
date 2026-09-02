@@ -13,6 +13,9 @@ const navLinks = [
   { label: "Nosotros", href: "/nosotros" },
   { label: "Calidad", href: "/calidad" },
   { label: "Contacto", href: "/contacto" },
+  // Acceso al portal interno de empleados. Vive en su propio subdominio y en su
+  // propio despliegue: esto es solo un enlace, el sitio no aloja nada del portal.
+  { label: "Login", href: "https://portal.neuhaus.com.ar" },
 ];
 
 const serviceLinks = [
@@ -252,6 +255,9 @@ const Header = () => {
                 </Link>
                 <Link href="/contacto" className="text-4xl font-bold tracking-tight text-foreground">
                   Contacto
+                </Link>
+                <Link href="https://portal.neuhaus.com.ar" className="text-4xl font-bold tracking-tight text-foreground">
+                  Login
                 </Link>
               </nav>
             </div>
