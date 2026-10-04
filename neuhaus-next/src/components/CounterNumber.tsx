@@ -14,11 +14,14 @@ interface Props {
 const CounterNumber = ({ value, label = "", suffix = "", delay = 0, className }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [displayValue, setDisplayValue] = useState("0");
+  const [displayValue, setDisplayValue] = useState(value);
   const numericValue = parseInt(value.replace(/\D/g, ""), 10);
 
   useEffect(() => {
     if (!isInView) return;
+    // El HTML del servidor lleva el valor final (lo que ve el rastreo);
+    // la cuenta arranca de 0 recién cuando el bloque entra en pantalla.
+    setDisplayValue("0");
     const duration = 2000;
     const steps = 60;
     const increment = numericValue / steps;
